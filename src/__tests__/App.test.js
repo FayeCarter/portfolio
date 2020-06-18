@@ -1,9 +1,15 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from '../App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "../App";
 
-test('renders with `Faye Carter` title', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/Faye Carter/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
+describe("App testing", () => {
+  test("renders with `Faye Carter` title", () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.find("h1").text()).toContain("Faye Carter");
+  });
+})
