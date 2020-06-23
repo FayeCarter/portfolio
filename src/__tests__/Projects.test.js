@@ -2,7 +2,6 @@ import React from "react";
 import Projects from "../components/Projects";
 import Navigation from "../components/Navigation";
 
-
 import { shallow } from 'enzyme';
 
 describe("Projects page", () => {
