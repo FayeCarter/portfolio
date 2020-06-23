@@ -1,11 +1,12 @@
 import React from "react";
 import Home from "../components/Home";
+import Navigation from "../components/Navigation";
 
 import { shallow } from 'enzyme';
 
 describe("Home page testing", () => {
   let wrapper;
-  
+
   beforeEach( () => {
     wrapper = shallow(<Home />)
   })
@@ -16,5 +17,9 @@ describe("Home page testing", () => {
 
   test("renders with `Junior Full Stack Developer` subheading", () => {
     expect(wrapper.find("h2").text()).toContain("Junior Full Stack Developer");
+  });
+
+  test("renders with Navigation", () => {
+    expect(wrapper.containsMatchingElement(<Navigation />)).toEqual(true);
   });
 })
