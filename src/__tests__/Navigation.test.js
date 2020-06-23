@@ -16,10 +16,11 @@ describe("Home page testing", () => {
 
   test("`Home` link navigates to Home page", () => {
     wrapper.find(".home-button").simulate('click');
-    expect(window.location.pathname).toBe("/");
+    expect(location.pathname).toBe("/");
   });
 
   test("renders with `Projects` link", () => {
     expect(wrapper.find(".projects-button").text()).toContain("Projects");
   });
+
 })
