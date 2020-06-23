@@ -1,7 +1,8 @@
 .Project {
   height: 21em;
-  width: 20em;
+  width: 18em;
   padding: 1em;
+  margin: 0.25em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,7 +18,7 @@
 }
 
 .project-image {
-  width: 20em;
+  width: 18em;
   margin: 0;
   padding: 0;
   align-self: flex-end;
