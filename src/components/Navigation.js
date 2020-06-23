@@ -8,6 +8,9 @@ function Navigation() {
           <Link to="/">
             <li className="home-button">Home</li>
           </Link>
+          <Link to="/projects">
+            <li className="projects-button">Projects</li>
+          </Link>
       </ul>
     </div>
   );
