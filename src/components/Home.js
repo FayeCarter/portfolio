@@ -1,12 +1,12 @@
 import React from 'react';
 
-function App() {
+function Home() {
   return (
-    <div className="App">
+    <div className="Home">
       <h1>Faye Carter</h1>
       <h2>Junior Full Stack Developer</h2>
     </div>
   );
 }
 
-export default App;
+export default Home;

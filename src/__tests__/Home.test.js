@@ -5,9 +5,11 @@ import { shallow } from 'enzyme';
 
 describe("Home page testing", () => {
   let wrapper;
-  beforeEach() {
+  
+  beforeEach( () => {
     wrapper = shallow(<Home />)
-  }
+  })
+
   test("renders with `Faye Carter` title", () => {
     expect(wrapper.find("h1").text()).toContain("Faye Carter");
   });
