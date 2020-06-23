@@ -32,3 +32,12 @@
 .tech-stack {
   font-style: italic;
 }
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color:rgba(255,0,0,0.3);
+}
