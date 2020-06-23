@@ -5,11 +5,9 @@ function Navigation() {
   return (
     <div className="Navigation">
       <ul>
-        <li>
-          <Link to="/Home">
-            <button>Home</button>
+          <Link to="/">
+            <li className="home-button">Home</li>
           </Link>
-        </li>
       </ul>
     </div>
   );
