@@ -10,6 +10,7 @@ function Projects() {
       <Project 
         title="WhatStack"
         project_description="A welcoming chat room environment for developers."
+        tech_stack="Sockets, OAuth, React, Node, Express, MongoDB"
         image="https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif"
       />
     </div>
