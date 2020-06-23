@@ -16,6 +16,11 @@ describe("Project page", () => {
     expect(wrapper.find(".project-description").text()).toContain("Project Description");
   });
 
+  test("has a passed project tech-stack `Tech Stack`", () => {
+    wrapper = shallow(<Project tech_stack="Tech Stack"/>)
+    expect(wrapper.find(".tech-stack").text()).toContain("Tech Stack");
+  });
+
   test("has a passed image source `Project Description`", () => {
     const img = "shorturl.at/ryMW1"
     wrapper = shallow(<Project image={img} />)
