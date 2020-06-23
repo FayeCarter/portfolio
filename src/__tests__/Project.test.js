@@ -8,7 +8,7 @@ describe("Project page", () => {
 
   test("has a passed title `Project Name`", () => {
     wrapper = shallow(<Project title="Project Name" />)
-    expect(wrapper.find("h1").text()).toContain("Project Name");
+    expect(wrapper.find(".project-title").text()).toContain("Project Name");
   });
 
   test("has a passed project description `Project Description`", () => {

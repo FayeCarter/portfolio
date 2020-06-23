@@ -1,8 +1,33 @@
 .Project {
-  height: 20em;
+  height: 21em;
   width: 20em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  text-align: justify;
+}
+
+.project-title {
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 .project-image {
-  width: 19em;
+  width: 20em;
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+}
+
+.project-description {
+  padding: 0;
+  margin: 0;
+}
+
+.tech-stack {
+  font-style: italic;
 }
