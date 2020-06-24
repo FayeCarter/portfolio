@@ -20,6 +20,7 @@ function ProjectDetails( { match } ) {
     <div className="ProjectDetails">
       <Navigation />
       <div className="project-title">{ projectInfo.title }</div>
+      <div className="tech-stack">{ projectInfo["tech-stack" ]}</div>
       <div className="project-description">{ projectInfo["full-description"] }</div>
     </div>
   );
