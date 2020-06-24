@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Navigation from './Navigation';
+
 import projectsList from "./projectsList";
 
 function ProjectDetails( { match } ) {
@@ -10,11 +12,13 @@ function ProjectDetails( { match } ) {
   }
 
   useEffect(() => {
+    console.log(match)
     getProject()
   })
 
   return (
     <div className="ProjectDetails">
+      <Navigation />
       <div className="project-title">{ projectInfo.title }</div>
     </div>
   );
