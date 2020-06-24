@@ -27,4 +27,9 @@ describe("Project page", () => {
     expect(wrapper.find(".project-image").prop("src")).toBe(img);
   });
 
+  test("Project links to path of passed title `Project Name`", () => {
+    wrapper = shallow(<Project title="Project Name" />)
+    expect(wrapper.find("Link").prop("to")).toBe("projects/Project Name");
+  });
+
 })
