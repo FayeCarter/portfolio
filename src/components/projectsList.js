@@ -46,7 +46,7 @@ const projectsList = [
       "A small scale Chrome Extension allowing users to visit BBC GoodFood recipes and see what time their recipe will be ready if the start cooking now."
     ],
     "tech-stack": "JavaScript, ChromeAPI",
-    "image": "https://github.com/FayeCarter/recipeTimer/blob/master/app.gif",
+    "image": "https://raw.githubusercontent.com/FayeCarter/recipeTimer/master/app.gif",
     "links": {
       "github": "https://github.com/FayeCarter/recipeTimer"
     }
