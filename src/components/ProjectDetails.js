@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
-function ProjectDetails( { title } ) {
+function ProjectDetails( { match } ) {
+
+  useEffect(() => [
+    console.log({match})
+  ])
   return (
     <div className="ProjectDetails">
-      <div className="project-title">{ title }</div>
+      <div className="project-title">{ match.params.name }</div>
     </div>
   );
 }
