@@ -5,6 +5,8 @@ import './NavigationPanel.css';
 function Navigation() {
   return (
     <div className="NavigationPanel">
+      <h1>Faye Carter</h1>
+      <h2>Junior Full Stack Developer</h2>
       <ul>
           <Link to="/">
             <li className="home-button">Home</li>
