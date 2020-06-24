@@ -19,9 +19,10 @@ function ProjectDetails( { match } ) {
   return (
     <div className="ProjectDetails">
       <Navigation />
-      <div className="project-title">{ projectInfo.title }</div>
-      <div className="tech-stack">{ projectInfo["tech-stack" ]}</div>
-      <div className="project-description">{ projectInfo["full-description"] }</div>
+      <h1 className="project-detail-title">{ projectInfo.title }</h1>
+      <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>
+      <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
+      <div className="project-detail-description">{ projectInfo["full-description"] }</div>
     </div>
   );
 }
