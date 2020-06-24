@@ -2,3 +2,20 @@
   font-family: 'Asap', sans-serif;
 }
 
+.body {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.main-window {
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  right: 0;
+  background-color: green;
+  float: right;
+}

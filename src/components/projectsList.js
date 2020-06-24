@@ -9,6 +9,7 @@ const projectsList = [
     ],
     "tech-stack": "Sockets, OAuth, React, Node, Express, MongoDB",
     "image": "https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif",
+    "gif": "https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif",
     "links": {
       "github": "https://github.com/FayeCarter/WhatStack",
       "live": "http://whatstack.herokuapp.com/"

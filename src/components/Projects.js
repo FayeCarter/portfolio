@@ -6,9 +6,8 @@ import './Projects.css';
 
 function Projects() {
   return (
-    <div className="Projects">
+    <div className="main-window">
       <NavigationPanel />
-      <h1>Projects</h1>
       <div className="project-container">
         {projectsList.map((project, index) => {
           return (

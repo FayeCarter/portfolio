@@ -11,7 +11,6 @@ function Navigation() {
           <Link to="/">
             <li className="home-button">Home</li>
           </Link>
-            <li> /  </li>
           <Link to="/projects">
             <li className="projects-button">Projects</li>
           </Link>

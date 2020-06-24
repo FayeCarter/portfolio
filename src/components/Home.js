@@ -3,7 +3,7 @@ import NavigationPanel from './NavigationPanel';
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="main-window">
       <NavigationPanel />
       <h1>Faye Carter</h1>
       <h2>Junior Full Stack Developer</h2>

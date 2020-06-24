@@ -17,7 +17,7 @@ function ProjectDetails( { match } ) {
   })
 
   return (
-    <div className="ProjectDetails">
+    <div className="main-window">
       <NavigationPanel />
       <h1 className="project-detail-title">{ projectInfo.title }</h1>
       <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>

@@ -12,10 +12,6 @@ describe("Projects page", () => {
     wrapper = shallow(<Projects />);
   })
   
-  test("renders with `Projects` title", () => {
-    expect(wrapper.find("h1").text()).toContain("Projects");
-  });
-
   test("renders with Navigation", () => {
     expect(wrapper.containsMatchingElement(<NavigationPanel />)).toEqual(true);
   });
