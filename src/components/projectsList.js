@@ -13,6 +13,43 @@ const projectsList = [
       "github": "https://github.com/FayeCarter/WhatStack",
       "live": "http://whatstack.herokuapp.com/"
     }
+  },
+  {
+    "title": "Bank",
+    "short-description": "A Ruby Bank account.",
+    "full-description": [
+      "A command-line Ruby application allowing you to create a bank account, make deposits, withdraw money and print statements.\n",
+      "The aim of this project was to focus fully on the TDD process with writing clean, DRY code.",
+    ],
+    "tech-stack": "Ruby, RSpec",
+    "image": "https://raw.githubusercontent.com/FayeCarter/CV/master/gifs/Bank.gif",
+    "links": {
+      "github": "https://github.com/FayeCarter/bank_tech_test"
+    }
+  },
+  {
+    "title": "Rock, Paper, Scissors",
+    "short-description": "Challenge yourself against the computer",
+    "full-description": [
+      "The player can enter their name and play 'Rock, Paper, Scissors' against the computer. The game tracks the game score so the player can see how successful they are."
+    ],
+    "tech-stack": "Ruby, Sinatra, CSS, HTML, RSpec",
+    "image": "https://github.com/FayeCarter/rps-challenge/raw/master/supporting/RPS.gif",
+    "links": {
+      "github": "https://github.com/FayeCarter/rps-challenge"
+    }
+  },
+  {
+    "title": "Recipe Timer",
+    "short-description": "Work in progress",
+    "full-description": [
+      "A small scale Chrome Extension allowing users to visit BBC GoodFood recipes and see what time their recipe will be ready if the start cooking now."
+    ],
+    "tech-stack": "JavaScript, ChromeAPI",
+    "image": "https://github.com/FayeCarter/recipeTimer/blob/master/app.gif",
+    "links": {
+      "github": "https://github.com/FayeCarter/recipeTimer"
+    }
   }
 ];
 
