@@ -15,9 +15,9 @@ function Projects() {
             <div className="project" key={ index  }>
               <Project 
                 title={ project.title }
-                project_description="A welcoming chat room environment for developers."
-                tech_stack="Sockets, OAuth, React, Node, Express, MongoDB"
-                image="https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif"
+                project_description={project["short-description"]}
+                tech_stack={ project["tech-stack"]}
+                image={ project.image }
               />
             </div>
           )
