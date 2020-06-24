@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavigationPanel from "../components/NavigationPanel";
 
 import { shallow } from 'enzyme';
 
@@ -7,7 +7,7 @@ describe("Home page testing", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Navigation />);
+    wrapper = shallow(<NavigationPanel />);
   })
 
   test("renders with `Home` link", () => {

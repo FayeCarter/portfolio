@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../components/Home";
-import Navigation from "../components/Navigation";
+import NavigationPanel from "../components/NavigationPanel";
 
 import { shallow } from 'enzyme';
 
@@ -20,6 +20,6 @@ describe("Home page testing", () => {
   });
 
   test("renders with Navigation", () => {
-    expect(wrapper.containsMatchingElement(<Navigation />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(<NavigationPanel />)).toEqual(true);
   });
 })

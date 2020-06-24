@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navigation from './Navigation';
+import NavigationPanel from './NavigationPanel';
 
 import projectsList from "./projectsList";
 
@@ -18,7 +18,7 @@ function ProjectDetails( { match } ) {
 
   return (
     <div className="ProjectDetails">
-      <Navigation />
+      <NavigationPanel />
       <h1 className="project-detail-title">{ projectInfo.title }</h1>
       <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>
       <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
