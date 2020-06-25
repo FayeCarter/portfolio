@@ -23,13 +23,6 @@ function Projects() {
         })}
         <Project title="Coming Soon" />
         <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
       </div>
     </div>
   );
