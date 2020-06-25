@@ -2,11 +2,15 @@
   float: left;
   bottom: 0;
   position: absolute;
+  width: 20%;
+  display: flex;
 }
 
 .links-list {
   transform: rotate(-90deg);
   transform-origin: left top 0;
+  margin: auto;
+  padding-left: 10px;
 }
 .media-link {
   display: inline;
