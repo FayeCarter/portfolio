@@ -1,0 +1,20 @@
+.Links {
+  float: left;
+  bottom: 0;
+  position: absolute;
+}
+
+.links-list {
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+}
+.media-link {
+  display: inline;
+  padding-right: 30px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.media-link:hover {
+  color: rgb(35, 79, 88);
+}
