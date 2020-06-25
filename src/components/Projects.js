@@ -21,8 +21,11 @@ function Projects() {
             />
           )
         })}
+        <div className="Project">
+          <div className="project-title">Coming Soon</div>
+        </div>
         <Project title="Coming Soon" />
-        <Project title="Coming Soon" />
+
       </div>
     </div>
   );
