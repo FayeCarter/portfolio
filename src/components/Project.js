@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import './Project.css';
 
 function Project( { title, project_description, tech_stack, image } ) {

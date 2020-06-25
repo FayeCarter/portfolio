@@ -1,0 +1,16 @@
+.details-container {
+  padding: 0 20% 0 20%;
+}
+
+.project-detail-title {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.project-detail-stack {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 40px;
+  font-style: italic;
+}
