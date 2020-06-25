@@ -21,13 +21,15 @@ function Projects() {
             />
           )
         })}
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
+        <Project title="Coming Soon" />
       </div>
     </div>
   );
