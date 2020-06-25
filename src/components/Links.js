@@ -7,7 +7,9 @@ function Links() {
         <a className="github" href="https://github.com/FayeCarter" target="_blank" rel="noopener noreferrer">
           <li>GITHUB</li>
         </a>
-        <li className="linkedin" >LINKEDIN</li>
+        <a className="linkedin" href="https://www.linkedin.com/in/faye-carter-74882bab/" target="_blank" rel="noopener noreferrer">
+          <li>LINKEDIN</li>
+        </a>
       </ul>
     </div>
   );
