@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 
 import { shallow } from 'enzyme';
 
-describe("Home page testing", () => {
+describe("Navigation component testing", () => {
   let wrapper;
 
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe("Home page testing", () => {
   })
 
   test("renders with `Home` link", () => {
-    expect(wrapper.find(".home-button").text()).toContain("Home");
+    expect(wrapper.find(".home-button").text()).toContain("HOME");
   });
 
   test("`Home` link navigates to Home page", () => {
@@ -20,7 +20,7 @@ describe("Home page testing", () => {
   });
 
   test("renders with `Projects` link", () => {
-    expect(wrapper.find(".projects-button").text()).toContain("Projects");
+    expect(wrapper.find(".projects-button").text()).toContain("PROJECTS");
   });
 
 })
