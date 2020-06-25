@@ -16,7 +16,7 @@
 }
 
 .github-link {
-  height: 40px;
+  height: 60px;
   opacity: 0.75;
   margin: auto;
   display: block;
@@ -32,4 +32,33 @@
   display: block;
   max-width: 80%;
   padding: 40px 0 0 0;
+}
+
+@media screen and (min-width: 601px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    padding: 0;
+  }
+
+  .project-detail-title {
+    font-size: 3em;
+  }
+  
+  .project-detail-stack {
+    font-size: 1em;
+    padding-bottom: 10px;
+  }
+
+  .github-link {
+    padding-bottom: 10px;
+  }
+
+  .project-detail-image {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+  }
 }
