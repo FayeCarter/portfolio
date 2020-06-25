@@ -7,10 +7,10 @@ function Navigation() {
     <div className="Navigation">
       <ul>
           <Link to="/">
-            <li className="home-button">HOME</li>
+            <li className="navigation-link">HOME</li>
           </Link>
           <Link to="/projects">
-            <li className="projects-button">PROJECTS</li>
+            <li className="navigation-link">PROJECTS</li>
           </Link>
       </ul>
     </div>

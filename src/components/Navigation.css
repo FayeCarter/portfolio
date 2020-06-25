@@ -9,19 +9,13 @@ ul {
   padding: 0;
 }
 
-li {
+.navigation-link {
   display: inline;
   padding-right: 30px;
   font-size: 0.75em;
   font-weight: bold;
 }
 
-
-a:link, a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
+.navigation-link:hover {
   text-decoration: rgb(197, 9, 9) underline wavy;
 }
