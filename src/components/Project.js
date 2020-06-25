@@ -6,9 +6,11 @@ function Project( { title, project_description, tech_stack, image } ) {
   return (
     <div className="Project">
       <Link to={`projects/${title}`}>
-        <div className="project-title">{ title }</div>
-        <div className="project-description">{ project_description }</div>
-        <div className="tech-stack">{ tech_stack }</div>
+        <div className="project-text">
+          <div className="project-title">{ title }</div>
+          <div className="project-description">{ project_description }</div>
+          <div className="tech-stack">{ tech_stack }</div>
+        </div>
       </Link>
     </div>
   );
