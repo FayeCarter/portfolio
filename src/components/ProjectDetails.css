@@ -14,3 +14,15 @@
   padding-bottom: 40px;
   font-style: italic;
 }
+
+.github-link {
+  height: 40px;
+  opacity: 0.75;
+  margin: auto;
+  display: block;
+  padding-bottom: 40px;
+}
+
+.github-link:hover {
+  opacity: 1;
+}

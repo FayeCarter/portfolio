@@ -22,7 +22,7 @@ function ProjectDetails( { match } ) {
       <div className="details-container">
         <h1 className="project-detail-title">{ projectInfo.title }</h1>
         <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>
-        <img className="github-link" src="./images/Github.png" alt="Github Logo"/>
+        <img className="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github Logo"/>
         <div className="project-detail-description">{ projectInfo["full-description"] }</div>
         <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
       </div>

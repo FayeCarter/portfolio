@@ -29,6 +29,6 @@ describe("ProjectDetails page", () => {
   });
 
   test("renders with Github logo", () => {
-    expect(wrapper.find(".github-link").prop("src")).toEqual("./images/Github.png");
+    expect(wrapper.find(".github-link").prop("src")).toEqual("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
   });
 })
