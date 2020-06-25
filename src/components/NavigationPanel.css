@@ -1,18 +1,17 @@
-.Navigation {
-  height: 2em;
+.NavigationPanel {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  float: left;
 }
 
 ul {
   list-style: none;
-  float: right;
   margin: 0;
   padding: 0;
 }
-
-li {
-  display: inline;
-}
-
 
 a:link, a:visited {
   text-decoration: none;
@@ -20,5 +19,5 @@ a:link, a:visited {
 }
 
 a:hover {
-  background-color:rgba(255,0,0,0.3);
+  color:rgb(255,0,0);
 }

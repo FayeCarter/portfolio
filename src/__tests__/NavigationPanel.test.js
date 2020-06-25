@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import NavigationPanel from "../components/NavigationPanel";
 
 import { shallow } from 'enzyme';
 
@@ -7,9 +7,17 @@ describe("Home page testing", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Navigation />);
+    wrapper = shallow(<NavigationPanel />);
   })
 
+  test("renders with `Faye Carter` title", () => {
+    expect(wrapper.find("h1").text()).toContain("Faye Carter");
+  });
+
+  test("renders with `Junior Full Stack Developer` subheading", () => {
+    expect(wrapper.find("h2").text()).toContain("Junior Full Stack Developer");
+  });
+  
   test("renders with `Home` link", () => {
     expect(wrapper.find(".home-button").text()).toContain("Home");
   });

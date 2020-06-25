@@ -1,14 +1,13 @@
 import React from 'react';
-import Navigation from './Navigation';
+import NavigationPanel from './NavigationPanel';
 import Project from "./Project";
 import projectsList from "./projectsList";
 import './Projects.css';
 
 function Projects() {
   return (
-    <div className="Projects">
-      <Navigation />
-      <h1>Projects</h1>
+    <div className="main-window">
+      <NavigationPanel />
       <div className="project-container">
         {projectsList.map((project, index) => {
           return (
