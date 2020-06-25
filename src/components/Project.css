@@ -1,13 +1,23 @@
 .Project {
   height: 21em;
   width: 25%;
-  padding: 1em;
-  margin: 0.25em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
   background-color: cadetblue;
+}
+
+.Project:nth-child(2n) {
+  background-color: white;
+}
+
+.Project:nth-child(3n) {
+  background-color: green;
+}
+
+.Project:nth-child(2n) {
+  background-color: white;
 }
 
 .project-title {
