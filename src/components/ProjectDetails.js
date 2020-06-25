@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
-
 import projectsList from "./projectsList";
+import './ProjectDetails.css';
 
 function ProjectDetails( { match } ) {
   const [ projectInfo, setProjectInfo ] = useState({})
@@ -19,10 +20,15 @@ function ProjectDetails( { match } ) {
   return (
     <div className="ProjectDetails">
       <Navigation />
-      <h1 className="project-detail-title">{ projectInfo.title }</h1>
-      <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>
-      <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
-      <div className="project-detail-description">{ projectInfo["full-description"] }</div>
+      <div className="details-container">
+        <h1 className="project-detail-title">{ projectInfo.title }</h1>
+        <div className="project-detail-stack">{ projectInfo["tech-stack" ]}</div>
+        <a href={ projectInfo.github } target="_blank">
+          <img className="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github Logo"/>
+        </a>
+        <div className="project-detail-description">{ projectInfo["full-description"] }</div>
+        <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
+      </div>
     </div>
   );
 }

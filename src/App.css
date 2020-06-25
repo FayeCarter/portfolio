@@ -2,3 +2,11 @@
   font-family: 'Asap', sans-serif;
 }
 
+body {
+  padding: 2% 10% 0 10%;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}

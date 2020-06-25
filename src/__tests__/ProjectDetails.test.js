@@ -28,4 +28,7 @@ describe("ProjectDetails page", () => {
     expect(wrapper.containsMatchingElement(<Navigation />)).toEqual(true);
   });
 
+  test("renders with Github logo", () => {
+    expect(wrapper.find(".github-link").prop("src")).toEqual("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  });
 })
