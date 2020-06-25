@@ -21,12 +21,6 @@ describe("Project page", () => {
     expect(wrapper.find(".tech-stack").text()).toContain("Tech Stack");
   });
 
-  test("has a passed image source `Project Description`", () => {
-    const img = "shorturl.at/ryMW1"
-    wrapper = shallow(<Project image={img} />)
-    expect(wrapper.find(".project-image").prop("src")).toBe(img);
-  });
-
   test("Project links to path of passed title `Project Name`", () => {
     wrapper = shallow(<Project title="Project Name" />)
     expect(wrapper.find("Link").prop("to")).toBe("projects/Project Name");
