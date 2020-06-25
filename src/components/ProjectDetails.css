@@ -26,3 +26,10 @@
 .github-link:hover {
   opacity: 1;
 }
+
+.project-detail-image {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  padding: 40px 0 0 0;
+}
