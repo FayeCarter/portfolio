@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectDetails from "../components/ProjectDetails";
 import Navigation from "../components/Navigation";
+import Links from "../components/Links";
 
 import { shallow } from 'enzyme';
 
@@ -30,5 +31,9 @@ describe("ProjectDetails page", () => {
 
   test("renders with Github logo", () => {
     expect(wrapper.find(".github-link").prop("src")).toEqual("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  });
+
+  test("renders with Links", () => {
+    expect(wrapper.containsMatchingElement(<Links />)).toEqual(true);
   });
 })
