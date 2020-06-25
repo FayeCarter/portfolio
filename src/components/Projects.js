@@ -12,14 +12,13 @@ function Projects() {
       <div className="project-container">
         {projectsList.map((project, index) => {
           return (
-            <div className="project" key={ index  }>
-              <Project 
-                title={ project.title }
-                project_description={project["short-description"]}
-                tech_stack={ project["tech-stack"]}
-                image={ project.image }
-              />
-            </div>
+            <Project 
+              key={ index  }
+              title={ project.title }
+              project_description={project["short-description"]}
+              tech_stack={ project["tech-stack"]}
+              image={ project.image }
+            />
           )
         })}
       </div>
