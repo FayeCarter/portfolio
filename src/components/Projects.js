@@ -24,7 +24,9 @@ function Projects() {
         <div className="Project">
           <div className="project-title">Coming Soon</div>
         </div>
-        <Project title="Coming Soon" />
+        <a className="Project" href="https://github.com/FayeCarter?tab=repositories">
+          <div className="project-title">see more on Github ...</div>
+        </a>
 
       </div>
     </div>
