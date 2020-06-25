@@ -9,10 +9,8 @@ const projectsList = [
     ],
     "tech-stack": "Sockets, OAuth, React, Node, Express, MongoDB",
     "image": "https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif",
-    "links": {
-      "github": "https://github.com/FayeCarter/WhatStack",
-      "live": "http://whatstack.herokuapp.com/"
-    }
+    "github": "https://github.com/FayeCarter/WhatStack",
+    "live": "http://whatstack.herokuapp.com/"
   },
   {
     "title": "Bank",
@@ -23,9 +21,7 @@ const projectsList = [
     ],
     "tech-stack": "Ruby, RSpec",
     "image": "https://raw.githubusercontent.com/FayeCarter/CV/master/gifs/Bank.gif",
-    "links": {
-      "github": "https://github.com/FayeCarter/bank_tech_test"
-    }
+    "github": "https://github.com/FayeCarter/bank_tech_test"
   },
   {
     "title": "Rock, Paper, Scissors",
@@ -35,9 +31,7 @@ const projectsList = [
     ],
     "tech-stack": "Ruby, Sinatra, CSS, HTML, RSpec",
     "image": "https://github.com/FayeCarter/rps-challenge/raw/master/supporting/RPS.gif",
-    "links": {
-      "github": "https://github.com/FayeCarter/rps-challenge"
-    }
+    "github": "https://github.com/FayeCarter/rps-challenge"
   },
   {
     "title": "Recipe Timer",
@@ -47,9 +41,7 @@ const projectsList = [
     ],
     "tech-stack": "JavaScript, ChromeAPI",
     "image": "https://raw.githubusercontent.com/FayeCarter/recipeTimer/master/app.gif",
-    "links": {
-      "github": "https://github.com/FayeCarter/recipeTimer"
-    }
+    "github": "https://github.com/FayeCarter/recipeTimer" 
   }
 ];
 
