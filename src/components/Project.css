@@ -1,6 +1,6 @@
 .Project {
-  /* height: 21em; */
   width: calc(100% / 3);
+  height: 120px;
   padding: 7% 0 7% 0;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
-  wifth: 80%;
+  width: 80%;
 } 
 
 .Project:nth-child(2n) {
@@ -34,12 +34,16 @@
   transition: box-shadow 0.25s ease;
 }
 .project-title {
-  font-size: 2em;
+  font-size: 2vw;
 }
 
 .tech-stack {
   font-style: italic;
   padding: 5px;
+}
+
+.project-description, .tech-stack {
+  font-size: 0.75vw;
 }
 
 .project-title, .tech-stack, .project-description {
@@ -49,4 +53,34 @@
 
 .Project:nth-child(4n -7) .project-title, .Project:nth-child(4n -7) .project-description, .Project:nth-child(4n -7) .tech-stack {
   color: rgb(43, 42, 42);
+}
+
+
+@media screen and (min-width: 1251px) {
+  .Project {
+    min-height: 120px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .Project {
+    width: calc(100% / 2);
+    min-height: 180px;
+  }
+  .project-description, .tech-stack {
+    font-size: 1.5vh;
+  }
+  .project-title {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Project {
+    width: calc(100% / 1);
+    height: 180px;
+  }
+  .project-title {
+    font-size: 5vw;
+  }
 }
