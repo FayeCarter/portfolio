@@ -27,7 +27,7 @@
 .Project:hover {
   box-shadow: inset 0 0 0 10px white;
   background-image: linear-gradient(to bottom right, rgb(248, 248, 248), rgb(237, 237, 237));
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow, background-image 0.25s ease;
 }
 
 .Project:nth-child(2n):hover {
@@ -43,7 +43,8 @@
 }
 
 .Project:hover .project-text .project-title{
-    font-size: 5vh;
+  font-size: 4.5vh;
+  transition: font-size 0.25s ease;
 }
 
 .project-title {
