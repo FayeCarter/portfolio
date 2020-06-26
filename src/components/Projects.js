@@ -28,7 +28,7 @@ function Projects() {
             <div className="Project">
               <div className="project-title">Coming Soon</div>
             </div>
-            <a className="Project" href="https://github.com/FayeCarter?tab=repositories">
+            <a className="Project" href="https://github.com/FayeCarter?tab=repositories" target="_blank" rel="noopener noreferrer">
               <div className="project-title">see more on Github ...</div>
             </a>
           </div>
