@@ -3,6 +3,8 @@
 
 # Portfolio
 
+Project can be found [here](http://www.faye-carter.com)
+
 In the project directory, you can run:
 
 ### `yarn start`
