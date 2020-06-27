@@ -92,5 +92,13 @@ describe("Navigation component testing", () => {
       expect(wrapper.find(".calc-result").text()).toBe("3");
     })
 
+    test("6 * 2 = 12", () => {
+      wrapper.find(".number-buttons").at(5).simulate("click", event)
+      wrapper.find(".action-buttons").at(3).simulate("click", event)
+      wrapper.find(".number-buttons").at(1).simulate("click", event)
+      wrapper.find(".equals-button").simulate("click", event)
+      expect(wrapper.find(".calc-result").text()).toBe("12");
+    })
+
   });
 });
