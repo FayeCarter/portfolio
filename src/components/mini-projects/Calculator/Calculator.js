@@ -27,6 +27,7 @@ function Calculator(value) {
   const clearDisplay= (event) => {
     event.preventDefault()
     setMaths("")
+    setResult("")
   }
 
   const calculateResult= () => {

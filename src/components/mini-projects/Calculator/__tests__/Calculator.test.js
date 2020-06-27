@@ -37,6 +37,15 @@ describe("Navigation component testing", () => {
 
       expect(wrapper.find(".calc-input").text()).toBe("");
     });
+
+    test("removes maths input", () => {
+      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.find(".equals-button").simulate("click", event)
+      expect(wrapper.find(".calc-result").text()).toBe("1");
+      wrapper.find(".clear-button").simulate("click", event)
+
+      expect(wrapper.find(".calc-result").text()).toBe("");
+    });
   });
 
   describe("Number Buttons", () => {
