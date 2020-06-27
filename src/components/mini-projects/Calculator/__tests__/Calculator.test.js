@@ -15,7 +15,7 @@ describe("Navigation component testing", () => {
   });
 
   test("input field initially renders with 0", () => {
-    expect(wrapper.find(".calc-input").prop("value")).toBe("0");
+    expect(wrapper.find(".calc-input").text()).toBe("0");
   });
 
   describe("Number Buttons", () => {
