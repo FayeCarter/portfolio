@@ -7,8 +7,9 @@ function MiniProjects() {
     <div>
       <Links />
       <div className="Window">
-        <div className="Projects">
-          <Navigation />
+        <Navigation />
+        <div className="Mini-Projects">
+          <a className="calculator-link">Calculator</a>
         </div>
       </div>
     </div>

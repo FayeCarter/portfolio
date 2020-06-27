@@ -19,4 +19,8 @@ describe("MiniProjects page testing", () => {
   test("renders with Links", () => {
     expect(wrapper.containsMatchingElement(<Links />)).toEqual(true);
   });
+
+  test("renders with link to Calculator", () => {
+    expect(wrapper.find(".calculator-link").text()).toEqual("Calculator");
+  });
 })
