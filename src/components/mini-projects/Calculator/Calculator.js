@@ -59,6 +59,12 @@ function Calculator(value) {
       >
         <div className="calc-result" >{ result }</div>
         <div className="calc-input" >{ maths }</div>
+        <button 
+          className="clear-button"
+          value="="
+          onClick={ clearDisplay }
+          >C
+        </button>
         <div className="numbers">
           {NUMBERS.map((number, index) => {
               return (
@@ -83,12 +89,6 @@ function Calculator(value) {
                 </button>
               )})}
         </div>
-        <button 
-          className="clear-button"
-          value="="
-          onClick={ clearDisplay }
-          >C
-        </button>
         <button 
           className="equals-button"
           value="="

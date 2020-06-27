@@ -57,7 +57,14 @@ button:focus {
   background-color: rgb(246, 210, 53);
 }
 
+.clear-button {
+  float: right;
+  width: 25%;
+  background-color: rgb(35, 79, 88);
+  color: white;
+}
+
 .equals-button {
-  width: 100%;
-  background-color: rgb(245, 109, 109);;
+  width: 75%;
+  background-color: rgb(245, 109, 109);
 }
