@@ -42,6 +42,11 @@ function Calculator(value) {
                 </button>
               )})}
         </div>
+        <button 
+          className="equals-button"
+          value="="
+          >=
+        </button>
       </form>   
     </div>
   );

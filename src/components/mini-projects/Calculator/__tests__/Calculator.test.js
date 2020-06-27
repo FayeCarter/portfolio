@@ -57,4 +57,10 @@ describe("Navigation component testing", () => {
     });
   });
 
+  describe("Equals", () => {
+    test("equals button is rendered ", () => {
+      expect(wrapper.find(".equals-button").exists());
+    });
+  });
+
 });
