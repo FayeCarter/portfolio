@@ -5,10 +5,10 @@ const ACTIONS = ["+","-","X","/"]
 
 function Calculator(value) {
 
-  const [ display, setDisplay ] = useState()
+  const [ display, setDisplay ] = useState("");
 
-  const renderDisplay= (e, number) => {
-    e.preventDefault()
+  const renderDisplay= (event, number) => {
+    event.preventDefault()
     setDisplay(number)
   }
 

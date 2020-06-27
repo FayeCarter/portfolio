@@ -5,9 +5,12 @@ import { shallow } from 'enzyme';
 
 describe("Navigation component testing", () => {
   let wrapper;
+  let event
 
   beforeEach(() => {
     wrapper = shallow(<Calculator />);
+    event = { preventDefault: () => {} }
+    jest.spyOn(event, 'preventDefault')
   })
 
   test("renders with results field", () => {
@@ -32,10 +35,8 @@ describe("Navigation component testing", () => {
     });
 
     test("When clicked value is added to cal-input div", () => {
-      const e = { preventDefault: () => {} }
-      jest.spyOn(e, 'preventDefault')
       const numberButton = wrapper.children().find(".number-buttons").first()
-      numberButton.simulate("click", e)
+      numberButton.simulate("click", event)
       expect(wrapper.find(".calc-input").text()).toBe(numberButton.prop("value"));
     });
   })
