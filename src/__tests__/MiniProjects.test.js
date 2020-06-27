@@ -22,5 +22,6 @@ describe("MiniProjects page testing", () => {
 
   test("renders with link to Calculator", () => {
     expect(wrapper.find(".calculator-link").text()).toEqual("Calculator");
+    expect(wrapper.find(".calculator-link").prop("to")).toEqual("/mini-projects/Calculator");
   });
 })
