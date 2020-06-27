@@ -11,9 +11,10 @@ function CalculatorProject() {
       <div className="Window">
         <div className="CalculatorProject">
           <Navigation />
+          <h1>Calculator</h1>
           <Calculator />
         </div>
-        </div>    
+      </div>    
     </div>
   );
 }
