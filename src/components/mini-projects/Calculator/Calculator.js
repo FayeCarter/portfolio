@@ -36,6 +36,8 @@ function Calculator(value) {
           total += parseInt(equation[i])
         } else if (opperator === "-" ){
           total -= parseInt(equation[i])
+        } else if (opperator === "/" ){
+          total /= parseInt(equation[i])
         }
       } 
     }
