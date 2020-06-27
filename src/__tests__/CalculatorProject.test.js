@@ -1,15 +1,16 @@
 import React from "react";
-import MiniProjects from "../components/MiniProjects";
+import CalculatorProject from "../components/CalculatorProject";
 import Navigation from "../components/Navigation";
 import Links from "../components/Links";
+import Calculator from "../components/mini-projects/Calculator/Calculator";
 
 import { shallow } from 'enzyme';
 
-describe("MiniProjects page testing", () => {
+describe("CalculatorProject page", () => {
   let wrapper;
-
+  
   beforeEach( () => {
-    wrapper = shallow(<MiniProjects />)
+    wrapper = shallow( <CalculatorProject /> )
   })
 
   test("renders with Navigation", () => {
@@ -20,8 +21,7 @@ describe("MiniProjects page testing", () => {
     expect(wrapper.containsMatchingElement(<Links />)).toEqual(true);
   });
 
-  test("renders with link to Calculator", () => {
-    expect(wrapper.find(".calculator-link").text()).toEqual("Calculator");
-    expect(wrapper.find(".calculator-link").prop("to")).toEqual("/mini-projects/Calculator");
+  test("renders with Calculator", () => {
+    expect(wrapper.containsMatchingElement(<Calculator />)).toEqual(true);
   });
 })
