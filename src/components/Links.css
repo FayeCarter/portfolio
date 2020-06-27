@@ -1,14 +1,11 @@
 .Links {
   float: left;
-  bottom: 0;
   position: absolute;
   width: 20%;
   display: flex;
 }
 
 .links-list {
-  transform: rotate(-90deg);
-  transform-origin: left top 0;
   margin: auto;
   padding-left: 10px;
 }
@@ -21,4 +18,26 @@
 
 .media-link:hover {
   color: rgb(35, 79, 88);
+}
+
+@media screen and (min-width: 601px) {
+  .Links {
+    bottom: 0;
+  }
+
+  .links-list {
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .Links {
+    vertical-align: middle;
+    height: 2.5em;
+  }
+  .links-list {
+    vertical-align: middle;
+  }
 }
