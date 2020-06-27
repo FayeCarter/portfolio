@@ -23,4 +23,9 @@ describe("Navigation component testing", () => {
     expect(wrapper.find(".projects-button").text()).toContain("PROJECTS");
   });
 
+  test("renders with `Mini Projects` link", () => {
+    expect(wrapper.find(".mini-projects-button").text()).toContain("MINI-PROJECTS");
+  });
+
+
 })
