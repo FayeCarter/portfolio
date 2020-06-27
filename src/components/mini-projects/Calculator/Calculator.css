@@ -1,0 +1,62 @@
+.Calculator {
+  width: 400px;
+  background-color: rgb(240, 240, 240);
+}
+
+.calc-result {
+  height: 90px;
+  line-height: 90px;
+  width: 100%;
+  text-align: right;
+  font-size: 8vh;
+}
+
+.calc-input {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: right;
+  font-size: 3vh;
+  color: rgb(84, 84, 84);
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 3vh;
+  border: none;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 50px rgba(0,0,0,.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+.numbers {
+  float: left;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.actions {
+  width: 25%;
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-buttons {
+  background-color: rgb(246, 210, 53);
+}
+
+.equals-button {
+  width: 100%;
+  background-color: rgb(245, 109, 109);;
+}
