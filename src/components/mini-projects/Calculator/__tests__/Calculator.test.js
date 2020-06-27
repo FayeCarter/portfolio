@@ -14,4 +14,8 @@ describe("Navigation component testing", () => {
     expect(wrapper.find(".calc-input").exists());
   });
 
+  test("input field initially renders with 0", () => {
+    expect(wrapper.find(".calc-input").prop("value")).toBe("0");
+  });
+
 })

@@ -10,6 +10,7 @@ function Calculator() {
         <input
           type="text"
           className="calc-input"
+          value="0"
         />
       </form>   
     </div>
