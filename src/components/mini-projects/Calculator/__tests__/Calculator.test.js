@@ -18,4 +18,10 @@ describe("Navigation component testing", () => {
     expect(wrapper.find(".calc-input").prop("value")).toBe("0");
   });
 
+  describe("Number Buttons", () => {
+    test("10 buttons are rendered", () => {
+      expect(wrapper.children().find(".number-buttons").length).toEqual(10);
+    });
+  })
+
 })

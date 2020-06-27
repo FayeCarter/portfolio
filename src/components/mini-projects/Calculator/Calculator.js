@@ -12,6 +12,16 @@ function Calculator() {
           className="calc-input"
           value="0"
         />
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
+        <button className="number-buttons"></button>
       </form>   
     </div>
   );
