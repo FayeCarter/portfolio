@@ -1,0 +1,12 @@
+.calculator-link {
+  font-weight: bold;
+}
+
+.calculator-link:hover {
+  color: rgb(35, 79, 88);
+}
+
+
+.mini-projects-links {
+  padding-top: 10px;
+}

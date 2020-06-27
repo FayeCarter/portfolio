@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
 import Calculator from "../components/mini-projects/Calculator/Calculator";
