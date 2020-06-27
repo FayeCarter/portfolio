@@ -32,9 +32,11 @@ describe("Navigation component testing", () => {
     });
 
     test("When clicked value is added to cal-input div", () => {
+      const e = { preventDefault: () => {} }
+      jest.spyOn(e, 'preventDefault')
       const numberButton = wrapper.children().find(".number-buttons").first()
-      numberButton.simulate("click")
-      expect(wrapper.find(".calc-result").text()).toBe(numberButton.prop("value"));
+      numberButton.simulate("click", e)
+      expect(wrapper.find(".calc-input").text()).toBe(numberButton.prop("value"));
     });
   })
 
