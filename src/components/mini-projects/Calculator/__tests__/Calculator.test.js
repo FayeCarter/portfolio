@@ -51,22 +51,31 @@ describe("Navigation component testing", () => {
     });
   })
 
-  describe("Action Buttons", () => {
-    test("4 buttons are rendered", () => {
-      expect(wrapper.children().find(".action-buttons").length).toEqual(4);
-    });
-  });
-
   describe("Equals", () => {
     test("equals button is rendered ", () => {
       expect(wrapper.find(".equals-button").exists());
     });
-
+    
     test("pressing button renders result", () => {
       wrapper.children().find(".number-buttons").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
       expect(wrapper.find(".calc-result").text()).toBe("1");
     });
   });
+  
+  describe("Action Buttons", () => {
+    test("4 buttons are rendered", () => {
+      expect(wrapper.children().find(".action-buttons").length).toEqual(4);
+    });
 
+    describe("Addition", () => {
+      test("1 + 1 = 2", () => {
+        wrapper.children().find(".number-buttons").first().simulate("click", event)
+        wrapper.children().find(".action-buttons").first().simulate("click", event)
+        wrapper.children().find(".number-buttons").first().simulate("click", event)
+        wrapper.find(".equals-button").simulate("click", event)
+        expect(wrapper.find(".calc-result").text()).toBe("2");
+      })
+    })
+  });
 });

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 const NUMBERS = ["1","2","3","4","5","6","7","8","9","0"]
-const ACTIONS = ["+","-","X","/"]
+const ACTIONS = ["+","-","*","/"]
 
 function Calculator(value) {
 
@@ -11,12 +11,28 @@ function Calculator(value) {
 
   const renderDisplay= (event, number) => {
     event.preventDefault()
-    setMaths( maths + number)
+
+    if ( NUMBERS.includes(number)) {
+      setMaths( maths + (number))
+    } else {
+      setMaths( maths + ` ${number} `)
+    }
   }
 
   const renderResult= (event) => {
     event.preventDefault()
-    setResult( maths )
+    calculateResult()
+  }
+
+  const calculateResult= () => {
+    let equation = maths.split(" ");
+    let total = 0;
+    for (let i = 0; i < equation.length ; i ++ ) {
+      if (!ACTIONS.includes(equation[i])) {
+        total += parseInt(equation[i])
+      } 
+    }
+    setResult(total)
   }
 
   return (
@@ -45,6 +61,7 @@ function Calculator(value) {
                   key={ index }
                   className="action-buttons"
                   value={ action }
+                  onClick={(event) => { renderDisplay(event, action) }}
                   >{ action }
                 </button>
               )})}
