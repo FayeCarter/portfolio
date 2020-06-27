@@ -9,7 +9,7 @@ function Calculator(value) {
 
   const renderDisplay= (event, number) => {
     event.preventDefault()
-    setDisplay(number)
+    setDisplay( display + number)
   }
 
   return (

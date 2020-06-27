@@ -9,7 +9,7 @@ describe("Navigation component testing", () => {
 
   beforeEach(() => {
     wrapper = shallow(<Calculator />);
-    event = { preventDefault: () => {} }
+    event = Object.assign(jest.fn(), {preventDefault: () => {}})
     jest.spyOn(event, 'preventDefault')
   })
 
@@ -38,6 +38,16 @@ describe("Navigation component testing", () => {
       const numberButton = wrapper.children().find(".number-buttons").first()
       numberButton.simulate("click", event)
       expect(wrapper.find(".calc-input").text()).toBe(numberButton.prop("value"));
+    });
+
+    test("When clicked value is added to cal-input div", () => {
+      const firstNumberButton = wrapper.children().find(".number-buttons").first()
+
+      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.children().find(".number-buttons").first().simulate("click", event)
+
+      const expectedValue = firstNumberButton.prop("value") + firstNumberButton.prop("value")
+      expect(wrapper.find(".calc-input").text()).toBe(expectedValue);
     });
   })
 
