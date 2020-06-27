@@ -27,9 +27,16 @@ function Calculator(value) {
   const calculateResult= () => {
     let equation = maths.split(" ");
     let total = 0;
+    let opperator = "+";
     for (let i = 0; i < equation.length ; i ++ ) {
-      if (!ACTIONS.includes(equation[i])) {
-        total += parseInt(equation[i])
+      if (ACTIONS.includes(equation[i])) {
+        opperator = equation[i]
+      } else {
+        if (opperator === "+" ) {
+          total += parseInt(equation[i])
+        } else if (opperator === "-" ){
+          total -= parseInt(equation[i])
+        }
       } 
     }
     setResult(total)
