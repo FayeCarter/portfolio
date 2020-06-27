@@ -12,6 +12,9 @@ function Navigation() {
           <Link to="/projects">
             <li className="navigation-link projects-button">PROJECTS</li>
           </Link>
+          <Link to="/mini-projects">
+            <li className="navigation-link mini-projects-button">MINI-PROJECTS</li>
+          </Link>
       </ul>
     </div>
   );
