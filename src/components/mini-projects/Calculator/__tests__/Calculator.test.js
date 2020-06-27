@@ -40,4 +40,10 @@ describe("Navigation component testing", () => {
     });
   })
 
-})
+  describe("Action Buttons", () => {
+    test("4 buttons are rendered", () => {
+      expect(wrapper.children().find(".action-buttons").length).toEqual(4);
+    });
+  });
+
+});

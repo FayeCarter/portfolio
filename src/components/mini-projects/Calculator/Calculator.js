@@ -1,6 +1,7 @@
-const NUMBERS = ["1","2","3","4","5","6","7","8","9","0"]
-
 import React, { useState } from 'react';
+
+const NUMBERS = ["1","2","3","4","5","6","7","8","9","0"]
+const ACTIONS = ["+","-","X","/"]
 
 function Calculator(value) {
 
@@ -27,6 +28,17 @@ function Calculator(value) {
                   value={ number }
                   onClick={(event) => { renderDisplay(event, number) }}
                   >{ number }
+                </button>
+              )})}
+        </div>
+        <div className="actions">
+          {ACTIONS.map((action, index) => {
+              return (
+                <button 
+                  key={ index }
+                  className="action-buttons"
+                  value={ action }
+                  >{ action }
                 </button>
               )})}
         </div>
