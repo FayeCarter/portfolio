@@ -5,11 +5,17 @@ const ACTIONS = ["+","-","X","/"]
 
 function Calculator(value) {
 
-  const [ display, setDisplay ] = useState("");
+  const [ maths, setMaths ] = useState("");
+  const [ result, setResult ] = useState("");
 
   const renderDisplay= (event, number) => {
     event.preventDefault()
-    setDisplay( display + number)
+    setMaths( maths + number)
+  }
+
+  const renderResult= (event) => {
+    event.preventDefault()
+    setResult( maths )
   }
 
   return (
@@ -17,8 +23,8 @@ function Calculator(value) {
       <form 
         className="form" 
       >
-        <div className="calc-result" >0</div>
-        <div className="calc-input" >{ display }</div>
+        <div className="calc-result" >{ result }</div>
+        <div className="calc-input" >{ maths }</div>
         <div className="numbers">
           {NUMBERS.map((number, index) => {
               return (
@@ -45,6 +51,7 @@ function Calculator(value) {
         <button 
           className="equals-button"
           value="="
+          onClick={ renderResult }
           >=
         </button>
       </form>   

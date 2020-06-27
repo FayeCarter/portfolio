@@ -17,8 +17,8 @@ describe("Navigation component testing", () => {
     expect(wrapper.find(".calc-result").exists());
   });
 
-  test("input field initially renders with 0", () => {
-    expect(wrapper.find(".calc-result").text()).toBe("0");
+  test("results field initially renders with 0", () => {
+    expect(wrapper.find(".calc-result").text()).toBe("");
   });
 
   test("renders with math input field", () => {
@@ -60,6 +60,12 @@ describe("Navigation component testing", () => {
   describe("Equals", () => {
     test("equals button is rendered ", () => {
       expect(wrapper.find(".equals-button").exists());
+    });
+
+    test("pressing button renders result", () => {
+      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.find(".equals-button").simulate("click", event)
+      expect(wrapper.find(".calc-result").text()).toBe("1");
     });
   });
 
