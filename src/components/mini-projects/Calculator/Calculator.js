@@ -24,6 +24,11 @@ function Calculator(value) {
     calculateResult()
   }
 
+  const clearDisplay= (event) => {
+    event.preventDefault()
+    setMaths("")
+  }
+
   const calculateResult= () => {
     let equation = maths.split(" ");
     let total = 0;
@@ -77,6 +82,12 @@ function Calculator(value) {
                 </button>
               )})}
         </div>
+        <button 
+          className="clear-button"
+          value="="
+          onClick={ clearDisplay }
+          >C
+        </button>
         <button 
           className="equals-button"
           value="="
