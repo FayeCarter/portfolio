@@ -12,7 +12,8 @@ function MiniProjects() {
       <div className="Window Mini-Projects">
         <h1>Mini-Projects</h1>
         <div className="mini-projects-links">
-          <Link className="calculator-link" to="/mini-projects/Calculator">Calculator</Link>
+          <Link className="calculator-link mini-links" to="/mini-projects/Calculator">Calculator</Link>
+          <Link className="mini-links" to="/mini-projects/Wave">Wave</Link>
         </div>
       </div>
     </div>

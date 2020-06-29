@@ -1,8 +1,9 @@
-.calculator-link {
+.mini-links {
   font-weight: bold;
+  display: block;
 }
 
-.calculator-link:hover {
+.mini-links:hover {
   color: rgb(35, 79, 88);
 }
 
