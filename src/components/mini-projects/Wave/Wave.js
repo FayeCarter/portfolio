@@ -1,5 +1,6 @@
 import React from 'react';
 import Person from "./components/Person"
+import './Wave.css';
 
 function Wave() {
 

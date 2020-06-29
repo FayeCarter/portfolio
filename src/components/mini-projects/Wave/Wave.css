@@ -1,0 +1,9 @@
+.Wave {
+  width: 100%;
+  display: flex;
+}
+
+.person {
+  max-width: 50%;
+  height:auto;
+}
