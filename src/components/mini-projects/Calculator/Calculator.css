@@ -4,7 +4,7 @@
   margin: auto;
 }
 
-.calc-result {
+.result {
   height: 80px;
   line-height: 80px;
   width: 100%;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-.calc-input {
+.calculation {
   height: 40px;
   line-height: 40px;
   width: 100%;
@@ -54,7 +54,7 @@ button:focus {
   flex-wrap: wrap;
 }
 
-.action-buttons {
+.action-button {
   background-color: rgb(246, 210, 53);
 }
 

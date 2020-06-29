@@ -14,59 +14,59 @@ describe("Navigation component testing", () => {
   })
 
   test("renders with results field", () => {
-    expect(wrapper.find(".calc-result").exists());
+    expect(wrapper.find(".result").exists());
   });
 
   test("results field initially renders with 0", () => {
-    expect(wrapper.find(".calc-result").text()).toBe("");
+    expect(wrapper.find(".result").text()).toBe("");
   });
 
-  test("renders with math input field", () => {
-    expect(wrapper.find(".calc-input").exists());
+  test("renders with maths input field", () => {
+    expect(wrapper.find(".calculation").exists());
   });
 
-  test("math input field initially renders empty", () => {
-    expect(wrapper.find(".calc-input").text()).toBe("");
+  test("aeths input field initially renders empty", () => {
+    expect(wrapper.find(".calculation").text()).toBe("");
   });
 
   describe("Clear Buttons", () => {
-    test("removes maths input", () => {
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
-      expect(wrapper.find(".calc-input").text()).toBe("1");
+    test("removes calculation", () => {
+      wrapper.children().find(".number-button").first().simulate("click", event)
+      expect(wrapper.find(".calculation").text()).toBe("1");
       wrapper.find(".clear-button").simulate("click", event)
 
-      expect(wrapper.find(".calc-input").text()).toBe("");
+      expect(wrapper.find(".calculation").text()).toBe("");
     });
 
     test("removes maths input", () => {
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("1");
+      expect(wrapper.find(".result").text()).toBe("1");
       wrapper.find(".clear-button").simulate("click", event)
 
-      expect(wrapper.find(".calc-result").text()).toBe("");
+      expect(wrapper.find(".result").text()).toBe("");
     });
   });
 
   describe("Number Buttons", () => {
     test("10 buttons are rendered", () => {
-      expect(wrapper.children().find(".number-buttons").length).toEqual(10);
+      expect(wrapper.children().find(".number-button").length).toEqual(10);
     });
 
-    test("When clicked value is added to cal-input div", () => {
-      const numberButton = wrapper.children().find(".number-buttons").first()
+    test("When clicked value is added to calculation", () => {
+      const numberButton = wrapper.children().find(".number-button").first()
       numberButton.simulate("click", event)
-      expect(wrapper.find(".calc-input").text()).toBe(numberButton.prop("value"));
+      expect(wrapper.find(".calculation").text()).toBe(numberButton.prop("value"));
     });
 
     test("When clicked value is added to cal-input div", () => {
-      const firstNumberButton = wrapper.children().find(".number-buttons").first()
+      const firstNumberButton = wrapper.children().find(".number-button").first()
 
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
 
       const expectedValue = firstNumberButton.prop("value") + firstNumberButton.prop("value")
-      expect(wrapper.find(".calc-input").text()).toBe(expectedValue);
+      expect(wrapper.find(".calculation").text()).toBe(expectedValue);
     });
   })
 
@@ -76,47 +76,47 @@ describe("Navigation component testing", () => {
     });
     
     test("pressing button renders result", () => {
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("1");
+      expect(wrapper.find(".result").text()).toBe("1");
     });
   });
   
   describe("Action Buttons", () => {
     test("4 buttons are rendered", () => {
-      expect(wrapper.children().find(".action-buttons").length).toEqual(4);
+      expect(wrapper.children().find(".action-button").length).toEqual(4);
     });
 
     test("1 + 1 = 2", () => {
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
-      wrapper.children().find(".action-buttons").first().simulate("click", event)
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
+      wrapper.children().find(".action-button").first().simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("2");
+      expect(wrapper.find(".result").text()).toBe("2");
     })
 
     test("3 - 1 = 2", () => {
-      wrapper.find(".number-buttons").at(2).simulate("click", event)
-      wrapper.find(".action-buttons").at(1).simulate("click", event)
-      wrapper.children().find(".number-buttons").first().simulate("click", event)
+      wrapper.find(".number-button").at(2).simulate("click", event)
+      wrapper.find(".action-button").at(1).simulate("click", event)
+      wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("2");
+      expect(wrapper.find(".result").text()).toBe("2");
     })
 
     test("6 / 2 = 3", () => {
-      wrapper.find(".number-buttons").at(5).simulate("click", event)
-      wrapper.find(".action-buttons").at(3).simulate("click", event)
-      wrapper.find(".number-buttons").at(1).simulate("click", event)
+      wrapper.find(".number-button").at(5).simulate("click", event)
+      wrapper.find(".action-button").at(3).simulate("click", event)
+      wrapper.find(".number-button").at(1).simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("3");
+      expect(wrapper.find(".result").text()).toBe("3");
     })
 
     test("6 * 2 = 12", () => {
-      wrapper.find(".number-buttons").at(5).simulate("click", event)
-      wrapper.find(".action-buttons").at(2).simulate("click", event)
-      wrapper.find(".number-buttons").at(1).simulate("click", event)
+      wrapper.find(".number-button").at(5).simulate("click", event)
+      wrapper.find(".action-button").at(2).simulate("click", event)
+      wrapper.find(".number-button").at(1).simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".calc-result").text()).toBe("12");
+      expect(wrapper.find(".result").text()).toBe("12");
     })
 
   });

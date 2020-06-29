@@ -54,11 +54,9 @@ function Calculator(value) {
 
   return (
     <div className="Calculator">
-      <form 
-        className="form" 
-      >
-        <div className="calc-result" >{ result }</div>
-        <div className="calc-input" >{ maths }</div>
+      <form >
+        <div className="result" >{ result }</div>
+        <div className="calculation" >{ maths }</div>
         <button 
           className="clear-button"
           value="="
@@ -70,7 +68,7 @@ function Calculator(value) {
               return (
                 <button 
                   key={ index }
-                  className="number-buttons"
+                  className="number-button"
                   value={ number }
                   onClick={(event) => { renderDisplay(event, number) }}
                   >{ number }
@@ -82,7 +80,7 @@ function Calculator(value) {
               return (
                 <button 
                   key={ index }
-                  className="action-buttons"
+                  className="action-button"
                   value={ action }
                   onClick={(event) => { renderDisplay(event, action) }}
                   >{ action }
