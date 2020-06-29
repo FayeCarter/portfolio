@@ -53,13 +53,13 @@ describe("Navigation component testing", () => {
       expect(wrapper.children().find(".number-button").length).toEqual(10);
     });
 
-    test("When clicked value is added to calculation", () => {
+    test("when clicked value is added to calculation", () => {
       const numberButton = wrapper.children().find(".number-button").first()
       numberButton.simulate("click", event)
       expect(wrapper.find(".calculation").text()).toBe(numberButton.prop("value"));
     });
 
-    test("When clicked value is added to cal-input div", () => {
+    test("when clicked value is added to calculations", () => {
       const firstNumberButton = wrapper.children().find(".number-button").first()
 
       wrapper.children().find(".number-button").first().simulate("click", event)
