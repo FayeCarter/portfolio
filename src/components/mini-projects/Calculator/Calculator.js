@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 const NUMBERS = ["1","2","3","4","5","6","7","8","9","0"]
-const ACTIONS = ["+","-","*","/"]
+const OPERATORS = ["+","-","*","/"]
 
 function Calculator(value) {
 
@@ -33,16 +33,16 @@ function Calculator(value) {
   const calculateResult= () => {
     let equation = maths.split(" ");
     let total = 0;
-    let opperator = "+";
+    let operator = "+";
     for (let i = 0; i < equation.length ; i ++ ) {
-      if (ACTIONS.includes(equation[i])) {
-        opperator = equation[i]
+      if (OPERATORS.includes(equation[i])) {
+        operator = equation[i]
       } else {
-        if (opperator === "+" ) {
+        if (operator === "+" ) {
           total += parseInt(equation[i])
-        } else if (opperator === "-" ){
+        } else if (operator === "-" ){
           total -= parseInt(equation[i])
-        } else if (opperator === "/" ){
+        } else if (operator === "/" ){
           total /= parseInt(equation[i])
         } else {
           total *= parseInt(equation[i])
@@ -75,15 +75,15 @@ function Calculator(value) {
                 </button>
               )})}
         </div>
-        <div className="actions">
-          {ACTIONS.map((action, index) => {
+        <div className="operators">
+          {OPERATORS.map((operator, index) => {
               return (
                 <button 
                   key={ index }
-                  className="action-button"
-                  value={ action }
-                  onClick={(event) => { renderDisplay(event, action) }}
-                  >{ action }
+                  className="operator-button"
+                  value={ operator }
+                  onClick={(event) => { renderDisplay(event, operator) }}
+                  >{ operator }
                 </button>
               )})}
         </div>

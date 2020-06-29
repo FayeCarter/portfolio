@@ -47,14 +47,14 @@ button:focus {
   justify-content: center;
 }
 
-.actions {
+.operators {
   width: 25%;
   float: right;
   display: flex;
   flex-wrap: wrap;
 }
 
-.action-button {
+.operator-button {
   background-color: rgb(246, 210, 53);
 }
 
