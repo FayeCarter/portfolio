@@ -84,12 +84,12 @@ describe("Navigation component testing", () => {
   
   describe("Operations", () => {
     test("4 buttons are rendered", () => {
-      expect(wrapper.children().find(".action-button").length).toEqual(4);
+      expect(wrapper.children().find(".operator-button").length).toEqual(4);
     });
 
     test("addition renders correctly", () => {
       wrapper.children().find(".number-button").first().simulate("click", event)
-      wrapper.children().find(".action-button").first().simulate("click", event)
+      wrapper.children().find(".operator-button").first().simulate("click", event)
       wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
       expect(wrapper.find(".result").text()).toBe("2");
@@ -97,7 +97,7 @@ describe("Navigation component testing", () => {
 
     test("subtraction renders correctly", () => {
       wrapper.find(".number-button").at(2).simulate("click", event)
-      wrapper.find(".action-button").at(1).simulate("click", event)
+      wrapper.find(".operator-button").at(1).simulate("click", event)
       wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
       expect(wrapper.find(".result").text()).toBe("2");
@@ -105,7 +105,7 @@ describe("Navigation component testing", () => {
 
     test("division renders correctly", () => {
       wrapper.find(".number-button").at(5).simulate("click", event)
-      wrapper.find(".action-button").at(3).simulate("click", event)
+      wrapper.find(".operator-button").at(3).simulate("click", event)
       wrapper.find(".number-button").at(1).simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
       expect(wrapper.find(".result").text()).toBe("3");
@@ -113,7 +113,7 @@ describe("Navigation component testing", () => {
 
     test("multiplication renders correctly", () => {
       wrapper.find(".number-button").at(5).simulate("click", event)
-      wrapper.find(".action-button").at(2).simulate("click", event)
+      wrapper.find(".operator-button").at(2).simulate("click", event)
       wrapper.find(".number-button").at(1).simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
       expect(wrapper.find(".result").text()).toBe("12");

@@ -6,16 +6,16 @@ const OPERATORS = ["+","-","*","/"]
 
 function Calculator() {
 
-  const [ maths, setMaths ] = useState("");
+  const [ calculation, setCalculation ] = useState("");
   const [ result, setResult ] = useState("");
 
-  const renderDisplay= (event, number) => {
+  const renderDisplay= (event, buttonValue) => {
     event.preventDefault()
 
-    if ( NUMBERS.includes(number)) {
-      setMaths( maths + (number))
+    if ( NUMBERS.includes(buttonValue)) {
+      setCalculation( calculation + (buttonValue))
     } else {
-      setMaths( maths + ` ${number} `)
+      setCalculation( calculation + ` ${buttonValue} `)
     }
   }
 
@@ -26,12 +26,12 @@ function Calculator() {
 
   const clearDisplay= (event) => {
     event.preventDefault()
-    setMaths("")
+    setCalculation("")
     setResult("")
   }
 
   const calculateResult= () => {
-    let equation = maths.split(" ");
+    let equation = calculation.split(" ");
     let total = 0;
     let operator = "+";
     for (let i = 0; i < equation.length ; i ++ ) {
@@ -56,10 +56,9 @@ function Calculator() {
     <div className="Calculator">
       <form >
         <div className="result" >{ result }</div>
-        <div className="calculation" >{ maths }</div>
+        <div className="calculation" >{ calculation }</div>
         <button 
           className="clear-button"
-          value="="
           onClick={ clearDisplay }
           >C
         </button>
@@ -89,7 +88,6 @@ function Calculator() {
         </div>
         <button 
           className="equals-button"
-          value="="
           onClick={ renderResult }
           >=
         </button>
