@@ -7,7 +7,12 @@ function Wave() {
 
   return (
     <div className="Wave">
-      <img className="person" src={image} onMouseEnter={() => setImage(wave2)} />
+      <img 
+        className="person" 
+        src={image} 
+        onMouseEnter={() => setImage(wave2)} 
+        onMouseLeave={() => setImage(wave1)} 
+      />
     </div>
   );
 }

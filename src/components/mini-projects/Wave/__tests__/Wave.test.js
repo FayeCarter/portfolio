@@ -19,4 +19,10 @@ describe("Wave component testing", () => {
     expect(wrapper.find(".person").prop("src")).toBe("wave2.svg");
   });
 
+  test("re-renders with first wave image on mouse exit", () => {
+    wrapper.find(".person").simulate("mouseenter");
+    wrapper.find(".person").simulate("mouseleave");
+    expect(wrapper.find(".person").prop("src")).toBe("wave1.svg");
+  });
+
 })
