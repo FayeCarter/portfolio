@@ -13,16 +13,14 @@ function MiniProject( { match } ) {
 
   return (
     <div>
+      <Navigation />
       <Links />
-      <div className="Window">
-        <div className="ProjectDetails">
-          <Navigation />
-          <h1>{match.params.name}</h1>
-          <div className="mini">
-              {getProject()}
-          </div>
+      <div className="Window ProjectDetails">
+        <h1>{match.params.name}</h1>
+        <div className="mini">
+            {getProject()}
         </div>
-      </div>    
+      </div>
     </div>
   );
 }
