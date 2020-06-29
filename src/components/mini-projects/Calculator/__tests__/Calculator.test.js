@@ -82,12 +82,12 @@ describe("Navigation component testing", () => {
     });
   });
   
-  describe("Action Buttons", () => {
+  describe("Operations", () => {
     test("4 buttons are rendered", () => {
       expect(wrapper.children().find(".action-button").length).toEqual(4);
     });
 
-    test("1 + 1 = 2", () => {
+    test("addition renders correctly", () => {
       wrapper.children().find(".number-button").first().simulate("click", event)
       wrapper.children().find(".action-button").first().simulate("click", event)
       wrapper.children().find(".number-button").first().simulate("click", event)
@@ -95,7 +95,7 @@ describe("Navigation component testing", () => {
       expect(wrapper.find(".result").text()).toBe("2");
     })
 
-    test("3 - 1 = 2", () => {
+    test("subtraction renders correctly", () => {
       wrapper.find(".number-button").at(2).simulate("click", event)
       wrapper.find(".action-button").at(1).simulate("click", event)
       wrapper.children().find(".number-button").first().simulate("click", event)
@@ -103,7 +103,7 @@ describe("Navigation component testing", () => {
       expect(wrapper.find(".result").text()).toBe("2");
     })
 
-    test("6 / 2 = 3", () => {
+    test("division renders correctly", () => {
       wrapper.find(".number-button").at(5).simulate("click", event)
       wrapper.find(".action-button").at(3).simulate("click", event)
       wrapper.find(".number-button").at(1).simulate("click", event)
@@ -111,7 +111,7 @@ describe("Navigation component testing", () => {
       expect(wrapper.find(".result").text()).toBe("3");
     })
 
-    test("6 * 2 = 12", () => {
+    test("multiplication renders correctly", () => {
       wrapper.find(".number-button").at(5).simulate("click", event)
       wrapper.find(".action-button").at(2).simulate("click", event)
       wrapper.find(".number-button").at(1).simulate("click", event)

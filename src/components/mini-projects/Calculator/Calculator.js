@@ -4,7 +4,7 @@ import './Calculator.css';
 const NUMBERS = ["1","2","3","4","5","6","7","8","9","0"]
 const OPERATORS = ["+","-","*","/"]
 
-function Calculator(value) {
+function Calculator() {
 
   const [ maths, setMaths ] = useState("");
   const [ result, setResult ] = useState("");
