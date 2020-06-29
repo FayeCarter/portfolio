@@ -25,23 +25,23 @@ describe("Navigation component testing", () => {
     expect(wrapper.find(".calculation").exists());
   });
 
-  test("aeths input field initially renders empty", () => {
+  test("calculation field initially renders empty", () => {
     expect(wrapper.find(".calculation").text()).toBe("");
   });
 
   describe("Clear Buttons", () => {
-    test("removes calculation", () => {
-      wrapper.children().find(".number-button").first().simulate("click", event)
-      expect(wrapper.find(".calculation").text()).toBe("1");
+    test("removes calculation when pressed", () => {
+      wrapper.find(".number-button").at(5).simulate("click", event)
+      expect(wrapper.find(".calculation").text()).toBe("6");
       wrapper.find(".clear-button").simulate("click", event)
 
       expect(wrapper.find(".calculation").text()).toBe("");
     });
 
-    test("removes maths input", () => {
-      wrapper.children().find(".number-button").first().simulate("click", event)
+    test("removes result field", () => {
+      wrapper.find(".number-button").at(5).simulate("click", event)
       wrapper.find(".equals-button").simulate("click", event)
-      expect(wrapper.find(".result").text()).toBe("1");
+      expect(wrapper.find(".result").text()).toBe("6");
       wrapper.find(".clear-button").simulate("click", event)
 
       expect(wrapper.find(".result").text()).toBe("");
