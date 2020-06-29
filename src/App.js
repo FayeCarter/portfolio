@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetails';
 import MiniProjects from './components/MiniProjects';
-import CalculatorProject from './components/CalculatorProject';
+import MiniProject from './components/MiniProject';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/projects" exact component={ Projects } />
         <Route path="/projects/:name" exact component={ ProjectDetails } />
         <Route path="/mini-projects" exact component={ MiniProjects } />
-        <Route path="/mini-projects/Calculator" exact component={ CalculatorProject } />
+        <Route path="/mini-projects/:name" exact component={ MiniProject } />
       </Switch>
     </ Router>
   );
