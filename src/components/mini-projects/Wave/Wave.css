@@ -1,9 +1,15 @@
 .Wave {
   width: 100%;
   display: flex;
+  overflow: hidden;
+  padding-top: 40%;
+}
+
+.Person {
+  bottom: 50px;
 }
 
 .person {
-  max-width: 50%;
-  height:auto;
+  max-width: 80px;
+  height: auto;
 }

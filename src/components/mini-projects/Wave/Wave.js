@@ -7,6 +7,19 @@ function Wave() {
   return (
     <div className="Wave">
       <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
+      <Person />
     </div>
   );
 }
