@@ -1,5 +1,6 @@
 .Navigation {
   height: 2em;
+  padding: 2% 10% 0 0;
 }
 
 ul {
@@ -11,7 +12,7 @@ ul {
 
 .navigation-link {
   display: inline;
-  padding-right: 30px;
+  padding-left: 30px;
   font-size: 0.75em;
   font-weight: bold;
   text-decoration: none;
