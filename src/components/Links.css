@@ -1,6 +1,6 @@
 .media-link {
   display: inline;
-  padding-right: 30px;
+  padding-left: 30px;
   font-size: 0.75em;
   font-weight: bold;
 }
@@ -31,8 +31,13 @@
   .Links {
     vertical-align: middle;
     height: 2.5em;
+    padding-right: 10%;
   }
   .links-list {
     vertical-align: middle;
+  }
+
+  .media-link {
+    color: rgb(118, 118, 118);
   }
 }
