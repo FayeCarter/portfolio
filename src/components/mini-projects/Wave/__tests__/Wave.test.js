@@ -11,7 +11,7 @@ describe("Wave component testing", () => {
   })
 
   test("renders with wave image", () => {
-    expect(wrapper.find(".person").prop()).toBe();
+    expect(wrapper.find(".person").prop("className")).toBe("person");
   });
 
 })
