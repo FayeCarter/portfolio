@@ -5,7 +5,7 @@ import './Navigation.css';
 function Navigation() {
   return (
     <div className="Navigation">
-      <ul>
+      <ul className="navigation-list">
           <Link to="/">
             <li className="navigation-link home-button">HOME</li>
           </Link>
