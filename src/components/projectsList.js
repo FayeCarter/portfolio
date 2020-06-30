@@ -10,8 +10,8 @@ const projectsList = [
       " - if someone has the same problem as you, they should be able to be part of that conversation."
     ],
     "key-features": [
-      "Log in Github account",
-      "Send and receive messages instantly in chat rooms with sockets.io",
+      "Log in Github account,",
+      "Send and receive messages instantly in chat rooms with sockets.io,",
       "Send code blocks and see them formatted correctly using markdown"
     ],
     "tech-stack": "Sockets, OAuth, React, Node, Express, MongoDB",
@@ -27,9 +27,9 @@ const projectsList = [
       "Bank is a command-line Ruby application allowing the user to create a bank account, make deposits, withdraw money and print statements.",
     ],
     "key-features": [
-      "Create and account",
-      "Withdraw funds",
-      "Deposit funds",
+      "Create and account,",
+      "Withdraw funds,",
+      "Deposit funds,",
       "Print Statements"
     ],
     "tech-stack": "Ruby, RSpec",
@@ -40,7 +40,14 @@ const projectsList = [
     "title": "Rock, Paper, Scissors",
     "short-description": "Challenge yourself against the computer",
     "full-description": [
-      "The player can enter their name and play 'Rock, Paper, Scissors' against the computer. The game tracks the game score so the player can see how successful they are."
+      "Test your luck playing a classic game of Rock, Paper, Scissors against the computer",
+      "User can enter their name, choose their weapon and fight against the computer. Score is tracked so that the user can see how lucky they are."
+    ],
+    "key-features": [
+      "Enter your name,",
+      "Pick a weapon,",
+      "See if you win,",
+      "Track your progress"
     ],
     "tech-stack": "Ruby, Sinatra, CSS, HTML, RSpec",
     "image": "https://github.com/FayeCarter/rps-challenge/raw/master/supporting/RPS.gif",
