@@ -14,7 +14,6 @@ function ProjectDetails( { match } ) {
   }
 
   useEffect(() => {
-    console.log(match)
     getProject()
   })
 
@@ -29,7 +28,11 @@ function ProjectDetails( { match } ) {
           <a href={ projectInfo.github } target="_blank" rel="noopener noreferrer">
             <img className="github-link" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github Logo"/>
           </a>
-          <div className="project-detail-description">{ projectInfo["full-description"] }</div>
+          <div className="project-detail-description">{ projectInfo["full-description"] ? projectInfo["full-description"].map((line, index) => {
+            return(
+            <div key={ index }>{ line }</div>
+            )}) : null}
+          </div>
           <img className="project-detail-image" src={ projectInfo["image"] } alt={projectInfo.title} />
         </div>
       </div>
