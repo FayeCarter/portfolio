@@ -3,9 +3,16 @@ const projectsList = [
     "title": "WhatStack",
     "short-description": "A welcoming chat room environment for developers.",
     "full-description": [
-      "The aim of the project was to create a welcoming chat room environment for developers to ask for help.",
-      "Users can access the site using their GitHub Login details, create a room based around their concern, post a question and receive feedback in real-time.",
-      "If the user wants to send a code block, it can be entered using markdown by typing three backticks followed by the language their code is written in. The message will be formatted as a code block in the specified language highlighting variables and correctly indenting each line.",
+      "During our time at makers we have been blocked. A lot. Asking for help can be tough, it's difficult to acknowledge your own ignorance and sometimes places can be less than welcoming to newcomers asking a question that's been covered before. Think back to all the times you've seen someone on Stack Overflow saying 'that's a stupid question' or 'This is a duplicate of <some other question which while similar isn't actually your question>'",
+      "We decided that:",
+      " - it shouldn't be so hard to ask for help.",
+      " - you can reach a solution quicker through a 5 minute conversation than posting a question on a message board and hoping someone gets back to you with something more positive than 'that's a stupid question'",
+      " - if someone has the same problem as you, they should be able to be part of that conversation."
+    ],
+    "key-features": [
+      "Log in Github account",
+      "Send and receive messages instantly in chat rooms with sockets.io",
+      "Send code blocks and see them formatted correctly using markdown"
     ],
     "tech-stack": "Sockets, OAuth, React, Node, Express, MongoDB",
     "image": "https://github.com/FayeCarter/CV/raw/master/gifs/WhatStack.gif",
@@ -16,8 +23,14 @@ const projectsList = [
     "title": "Bank",
     "short-description": "A Ruby Bank account.",
     "full-description": [
-      "A command-line Ruby application allowing you to create a bank account, make deposits, withdraw money and print statements.\n",
-      "The aim of this project was to focus fully on the TDD process with writing clean, DRY code.",
+      "The aim of this project was to focus fully on the TDD and OOP while writing clean, DRY code.",
+      "Bank is a command-line Ruby application allowing the user to create a bank account, make deposits, withdraw money and print statements.",
+    ],
+    "key-features": [
+      "Create and account",
+      "Withdraw funds",
+      "Deposit funds",
+      "Print Statements"
     ],
     "tech-stack": "Ruby, RSpec",
     "image": "https://raw.githubusercontent.com/FayeCarter/CV/master/gifs/Bank.gif",
