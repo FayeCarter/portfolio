@@ -23,6 +23,6 @@ describe("Links component testing", () => {
   });
 
   test("Linkedin link has link to Linkedin", () => {
-    expect(wrapper.find(".linkedin").prop("href")).toEqual("https://www.linkedin.com/in/faye-carter-74882bab/");
+    expect(wrapper.find(".linkedin").prop("href")).toEqual("https://www.linkedin.com/in/fayecarter/");
   });
 })
