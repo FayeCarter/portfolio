@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Block ({value}) {
+function Block ({value, activeNumber}) {
 
   return (
-    <div className="block" value={value} >
-
+    <div className="block" value={value}>
+      <div>{value}</div>
     </div>
   );
 }

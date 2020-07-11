@@ -19,4 +19,19 @@ describe("Memory component testing", () => {
     ])).toEqual(true);
   });
 
+  describe("Start Game", () => {
+
+    beforeEach(() => {
+      jest.spyOn(global.Math, 'floor').mockReturnValue(1);
+    });
+
+    test("randomly picks a block", () => {
+      wrapper.find("button").simulate("click");
+
+      expect(wrapper.containsAllMatchingElements([
+        <Block value="1" activeNumber="2" />,
+      ])).toEqual(true);
+    });
+  })
+
 })
