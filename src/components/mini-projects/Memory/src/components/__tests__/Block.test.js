@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from 'enzyme';
+import { act, waitForElement } from "@testing-library/react"
+import { shallow, mount } from 'enzyme';
 import Block from "../Block";
 
 describe("Block component testing", () => {
@@ -10,4 +11,4 @@ describe("Block component testing", () => {
     expect(wrapper.prop("value")).toEqual("1");
   });
 
-})
+});
