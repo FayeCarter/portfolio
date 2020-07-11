@@ -1,5 +1,5 @@
 import React from 'react';
-import Block from './src/Block';
+import Block from './src/components/Block';
 function Memory() {
 
   return (

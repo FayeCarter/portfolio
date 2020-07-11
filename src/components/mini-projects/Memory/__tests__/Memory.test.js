@@ -1,6 +1,6 @@
 import React from "react";
 import Memory from "../Memory";
-import Block from "../src/Block";
+import Block from "../src/components/Block";
 import { shallow } from 'enzyme';
 
 describe("Memory component testing", () => {
