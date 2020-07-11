@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Block() {
+function Block ({value}) {
 
   return (
-    <div className="block">
+    <div className="block" value={value} >
 
     </div>
   );
