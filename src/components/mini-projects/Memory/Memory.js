@@ -4,7 +4,10 @@ function Memory() {
 
   return (
     <div className="memory">
-      <Block />
+      <Block value="1" />
+      <Block value="2" />
+      <Block value="3" />
+      <Block value="4" />
     </div>
   );
 }

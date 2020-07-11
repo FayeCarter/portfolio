@@ -10,8 +10,13 @@ describe("Memory component testing", () => {
     wrapper = shallow(<Memory />)
   })
 
-  test("renders with a Block", () => {
-    expect(wrapper.containsMatchingElement(<Block />)).toEqual(true);
+  test("renders with 4 Blocks", () => {
+    expect(wrapper.containsAllMatchingElements([
+      <Block value="1" />,
+      <Block value="2" />,
+      <Block value="3" />,
+      <Block value="4" />,
+    ])).toEqual(true);
   });
 
 })
