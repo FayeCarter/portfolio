@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
+import { cardConverter } from './src/cardCoverter';
 
 function HigherLower() {
   const [ currentCard, setCurrentCard ] = useState({
@@ -21,27 +22,27 @@ function HigherLower() {
     let cardValue = response.data.cards[0].value
     let deck = response.data.deck_id
     
-    setCurrentCard({image: cardImage, value: cardValue})
+    setCurrentCard({image: cardImage, value: cardConverter(cardValue)})
     setDeckId(deck)
   }
 
   const higher =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    value > currentCard.value ? setScore("1") : setActive(false)
+    cardConverter(value) > currentCard.value ? setScore("1") : setActive(false)
   }
 
   const lower =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    value < currentCard.value ? setScore("1") : setActive(false)
+    cardConverter(value) < currentCard.value ? setScore("1") : setActive(false)
   }
 
   const getCard = async () => {
     let response = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
     let cardImage = response.data.cards[0].image
     let cardValue = response.data.cards[0].value
-    setCurrentCard({image: cardImage, value: cardValue}) 
+    setCurrentCard({image: cardImage, value: cardConverter(cardValue)}) 
     return cardValue;
   }
 
