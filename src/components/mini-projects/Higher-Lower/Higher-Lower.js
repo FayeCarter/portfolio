@@ -13,7 +13,7 @@ function HigherLower() {
   });
   const [ deckID, setDeckId ] = useState("");
   const [ active, setActive ] = useState(false);
-  const [ score, setScore ] = useState("0");
+  const [ score, setScore ] = useState(0);
 
   const startGame = async () => {
     setActive(true)
@@ -29,13 +29,13 @@ function HigherLower() {
   const higher =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    cardConverter(value) > currentCard.value ? setScore("1") : setActive(false)
+    cardConverter(value) > currentCard.value ? setScore(score + 1) : setActive(false)
   }
 
   const lower =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    cardConverter(value) < currentCard.value ? setScore("1") : setActive(false)
+    cardConverter(value) < currentCard.value ? setScore(score + 1) : setActive(false)
   }
 
   const getCard = async () => {
