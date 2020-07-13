@@ -26,10 +26,6 @@
   background-clip: content-box;
 }
 
-.previous-card {
-  opacity: 90%;
-}
-
 .cards {
   width: 60%;
   display: grid;
