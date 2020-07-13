@@ -31,6 +31,12 @@ function HigherLower() {
     value > currentCard.value ? setScore("1") : setActive(false)
   }
 
+  const lower =  async () => {
+    setPreviousCard(currentCard);
+    let value = await getCard()
+    value < currentCard.value ? setScore("1") : setActive(false)
+  }
+
   const getCard = async () => {
     let response = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
     let cardImage = response.data.cards[0].image
@@ -52,6 +58,7 @@ function HigherLower() {
       </div>
       <button className="start-game" onClick={startGame}>Start</button>
       <button className="higher" onClick={higher}>Higher</button>
+      <button className="lower" onClick={lower}>Lower</button>
       <div className="score" >{score}</div>
       { !active ? <div className="game-status" >Game Over</div> : null}
     </div>
