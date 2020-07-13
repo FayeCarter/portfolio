@@ -1,12 +1,14 @@
 .Wave {
   display: flex;
   overflow: hidden;
-  padding-top: 35%;
   justify-content: center;
+  bottom: 50px;
+  position: fixed;
+  width: 90%;
+  margin: auto;
 }
 
 .Person {
-  bottom: 50px;
 }
 
 .person {
