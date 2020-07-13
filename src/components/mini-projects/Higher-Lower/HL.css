@@ -27,7 +27,7 @@
 }
 
 .previous-card {
-  opacity: 50%;
+  opacity: 90%;
 }
 
 .cards {
@@ -41,6 +41,7 @@
 .controls {
   margin: auto;
 }
+
 .controls button {
   width: 100px;
   height: 40px;
