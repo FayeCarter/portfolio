@@ -14,35 +14,31 @@ function HigherLower() {
   const [ active, setActive ] = useState(false);
   const [ score, setScore ] = useState("0");
 
-  const startGame =  () => {
+  const startGame = async () => {
     setActive(true)
-    axios.get("https://deckofcardsapi.com/api/deck/new/draw/?count=1")
-    .then( response => {
-      let cardImage = response.data.cards[0].image
-      let cardValue = response.data.cards[0].value
-      let deck = response.data.deck_id
-      setCurrentCard({image: cardImage, value: cardValue})
-      setDeckId(deck)
-    })
+    let response = await axios.get("https://deckofcardsapi.com/api/deck/new/draw/?count=1")
+    let cardImage = response.data.cards[0].image
+    let cardValue = response.data.cards[0].value
+    let deck = response.data.deck_id
+    
+    setCurrentCard({image: cardImage, value: cardValue})
+    setDeckId(deck)
   }
 
   const higher =  async () => {
-    await setPreviousCard(currentCard);
-    await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
-    .then( response => {
-      let cardImage = response.data.cards[0].image
-      let cardValue = response.data.cards[0].value
-      setCurrentCard({image: cardImage, value: cardValue})
-      checkValue(cardValue, "higher")    
-    })
+    setPreviousCard(currentCard);
+    let value = await getCard()
+    value > currentCard.value ? setScore("1") : setActive(false)
   }
 
-  const checkValue =  (value, call) => {
-    if (call === "higher"){
-      value > currentCard.value ? setScore("1") : setActive(false)
-    }
+  const getCard = async () => {
+    let response = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
+    let cardImage = response.data.cards[0].image
+    let cardValue = response.data.cards[0].value
+    setCurrentCard({image: cardImage, value: cardValue}) 
+    return cardValue;
   }
-    
+
   return (
     <div className="high-low">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Card_back_05a.svg" alt="deck"/>
