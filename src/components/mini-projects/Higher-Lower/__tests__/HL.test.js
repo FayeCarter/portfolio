@@ -40,7 +40,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/9S.png");
-      expect(wrapper.find(".score").text()).toEqual("1");
+      expect(wrapper.find(".score").text()).toEqual("Score: 1");
     });
 
     it('drawing a lower card ends game', async () => {
@@ -58,7 +58,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/7S.png");
-      expect(wrapper.find(".score").text()).toEqual("0");
+      expect(wrapper.find(".score").text()).toEqual("Score: 0");
       expect(wrapper.find(".game-status").text()).toEqual("Game Over");
     });
   })
@@ -79,7 +79,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/7S.png");
-      expect(wrapper.find(".score").text()).toEqual("1");
+      expect(wrapper.find(".score").text()).toEqual("Score: 1");
     });
 
     it('drawing a higher card ends game', async () => {
@@ -97,7 +97,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/9S.png");
-      expect(wrapper.find(".score").text()).toEqual("0");
+      expect(wrapper.find(".score").text()).toEqual("Score: 0");
       expect(wrapper.find(".game-status").text()).toEqual("Game Over");
     });
   });
@@ -118,7 +118,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8H.png");
-      expect(wrapper.find(".score").text()).toEqual("0");
+      expect(wrapper.find(".score").text()).toEqual("Score: 0");
       expect(wrapper.find(".game-status")).toEqual({});
     });
 
@@ -137,7 +137,7 @@ describe('Higher-Lower testing', () => {
       
       expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
       expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8H.png");
-      expect(wrapper.find(".score").text()).toEqual("0");
+      expect(wrapper.find(".score").text()).toEqual("Score: 0");
       expect(wrapper.find(".game-status")).toEqual({});
     });
   });

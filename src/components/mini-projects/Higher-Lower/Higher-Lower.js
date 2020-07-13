@@ -1,6 +1,7 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { cardConverter } from './src/cardCoverter';
+import "./HL.css"
 
 function HigherLower() {
   const [ currentCard, setCurrentCard ] = useState({
@@ -44,7 +45,6 @@ function HigherLower() {
     }
   }
 
-
   const getCard = async () => {
     let response = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
     let cardImage = response.data.cards[0].image
@@ -55,20 +55,20 @@ function HigherLower() {
 
   return (
     <div className="high-low">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Card_back_05a.svg" alt="deck"/>
-      <div>
-        <h3>Previous</h3>
-        { previousCard.image ? <img src={previousCard.image} className="previous-card" alt="previous card"/> : null}
+      <div className="game">
+        <div className="score" >Score: {score}</div>
+        { !active ? <div className="game-status" >Game Over</div> : null}
       </div>
-      <div>
-        <h3>Current</h3>
+      <div className="cards">
+        <div className="deck" />
+        { previousCard.image ? <img src={previousCard.image} className="previous-card" alt="previous card"/> : null}
         { currentCard.image ? <img src={currentCard.image} className="current-card" alt="current card"/> : null}
       </div>
-      <button className="start-game" onClick={startGame}>Start</button>
-      <button className="higher" onClick={higher}>Higher</button>
-      <button className="lower" onClick={lower}>Lower</button>
-      <div className="score" >{score}</div>
-      { !active ? <div className="game-status" >Game Over</div> : null}
+      <div className="controls">
+        <button className="start-game" onClick={startGame}>Start</button>
+        <button className="higher" onClick={higher}>Higher</button>
+        <button className="lower" onClick={lower}>Lower</button>
+      </div>
     </div>
   );
 }
