@@ -64,7 +64,7 @@ function HigherLower() {
     <div className="high-low mini-project">
       <div className="game">
         <div className="score" >Score: {score}</div>
-        { !active ? <div className="game-status" >Game Over</div> : null}
+        { !active && currentCard.image ? <div className="game-status" >Game Over</div> : null}
       </div>
       <div className="cards">
         <div className="deck" />
