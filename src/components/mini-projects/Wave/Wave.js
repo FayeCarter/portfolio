@@ -5,7 +5,7 @@ import './Wave.css';
 function Wave() {
 
   return (
-    <div className="Wave">
+    <div className="Wave mini-project">
       <Person />
       <Person />
       <Person />

@@ -53,7 +53,7 @@ function Calculator() {
   }
 
   return (
-    <div className="Calculator">
+    <div className="Calculator mini-project">
       <form >
         <div className="result" >{ result }</div>
         <div className="calculation" >{ calculation }</div>

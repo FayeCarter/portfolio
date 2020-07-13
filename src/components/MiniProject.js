@@ -16,8 +16,8 @@ function MiniProject( { match } ) {
       <Navigation />
       <Links />
       <div className="Window ProjectDetails">
-        <h1>{match.params.name}</h1>
         <div className="mini">
+        <h1>{match.params.name}</h1>
             {getProject()}
         </div>
       </div>
