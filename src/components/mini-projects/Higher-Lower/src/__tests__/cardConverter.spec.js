@@ -15,3 +15,8 @@ test("it converts King to value 13", () => {
 test("it converts Ace to value 14", () => {
   expect(cardConverter("ACE")).toEqual(14);
 });
+
+test("it converts string values to integers", () => {
+  expect(cardConverter("1")).toEqual(1);
+  expect(cardConverter("5")).toEqual(5);
+});

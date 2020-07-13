@@ -7,5 +7,7 @@ export const cardConverter = (card) => {
     return 13;
   } else if (card === "ACE") {
     return 14;
+  } else {
+    return parseInt(card);
   }
 };
