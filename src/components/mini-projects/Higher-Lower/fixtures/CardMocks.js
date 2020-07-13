@@ -58,6 +58,27 @@ export const lowerCardMock = {
       "suit": "SPADES"
       }
       ],
-      "remaining": 49
+      "remaining": 50
+    }
+}
+
+export const equalValueMock = { 
+  data: 
+    {
+      "success": true,
+      "deck_id": "98qslr8lv1u0",
+      "cards": [
+      {
+      "code": "8H",
+      "image": "https://deckofcardsapi.com/static/img/8H.png",
+      "images": {
+      "svg": "https://deckofcardsapi.com/static/img/8H.svg",
+      "png": "https://deckofcardsapi.com/static/img/8H.png"
+      },
+      "value": "8",
+      "suit": "HEARTS"
+      }
+      ],
+      "remaining": 50
     }
 }

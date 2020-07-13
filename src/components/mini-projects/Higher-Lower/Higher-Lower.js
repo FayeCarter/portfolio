@@ -29,14 +29,21 @@ function HigherLower() {
   const higher =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    cardConverter(value) > currentCard.value ? setScore(score + 1) : setActive(false)
+    cardConverter(value) > currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
   }
 
   const lower =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    cardConverter(value) < currentCard.value ? setScore(score + 1) : setActive(false)
+    cardConverter(value) < currentCard.value ? setScore(score + 1) : setActive(false) ;
   }
+
+  const checkDraw =  (current, previous) => {
+    if ( current !== previous) {
+      setActive(false);
+    }
+  }
+
 
   const getCard = async () => {
     let response = await axios.get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
