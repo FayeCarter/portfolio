@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
-import Info from "./mini-projects/Info"
+import Info from "../components/mini-projects/Info"
+import { projectDescription } from "./mini-projects/projectDescription";
 
 function MiniProject( { match } ) {
-
+  const project = match.params.name
+ 
   const getProject = () => {
-    const Item = require(`./mini-projects/${match.params.name}/${match.params.name}` ).default
+    const Item = require(`./mini-projects/${project}/${project}` ).default
     return (
-      <Item />
+      <>
+        <h1>{match.params.name}</h1>
+        <Info  description={projectDescription[project]} />
+        <Item />
+      </>
     )
   }
 
@@ -18,9 +24,7 @@ function MiniProject( { match } ) {
       <Links />
       <div className="Window ProjectDetails">
         <div className="mini">
-        <h1>{match.params.name}</h1>
-        <Info description="Words and Words"/>
-          {getProject()}
+        {getProject()}
         </div>
       </div>
     </div>
