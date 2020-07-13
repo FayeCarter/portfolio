@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
 import Info from "../components/mini-projects/Info"
