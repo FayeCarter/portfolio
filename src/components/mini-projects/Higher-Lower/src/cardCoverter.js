@@ -5,5 +5,7 @@ export const cardConverter = (card) => {
     return "12";
   } else if (card === "KING") {
     return "13";
+  } else if (card === "ACE") {
+    return "14";
   }
 };
