@@ -17,7 +17,7 @@ function HigherLower() {
   const [ score, setScore ] = useState(0);
 
   const startGame = async () => {
-    setActive(true)
+    resetGame();
     let response = await axios.get("https://deckofcardsapi.com/api/deck/new/draw/?count=1")
     let cardImage = response.data.cards[0].image
     let cardValue = response.data.cards[0].value
@@ -43,6 +43,13 @@ function HigherLower() {
     if ( current !== previous) {
       setActive(false);
     }
+  }
+
+  const resetGame = () => {
+    setActive(true);
+    setScore(0);
+    setCurrentCard("");
+    setPreviousCard("");
   }
 
   const getCard = async () => {
