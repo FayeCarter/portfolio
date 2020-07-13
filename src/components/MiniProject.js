@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
+import Info from "./mini-projects/Info"
 
 function MiniProject( { match } ) {
 
@@ -18,6 +19,7 @@ function MiniProject( { match } ) {
       <div className="Window ProjectDetails">
         <div className="mini">
         <h1>{match.params.name}</h1>
+        <Info />
           {getProject()}
         </div>
       </div>
