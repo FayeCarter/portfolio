@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 function Info({ description }) {
 
   const [ projectInfo, setProjectInfo ] = useState("")
-  const showInfo = () => {
-    setProjectInfo(description)
+  const updateInfo = () => {
+    projectInfo ? setProjectInfo("") : setProjectInfo(description);
   };
 
   return (
-    <div className="info" onMouseEnter={showInfo}> 
+    <div className="info" onMouseEnter={updateInfo} onMouseLeave={updateInfo}> 
       INFO
       { projectInfo ? <div className="info-box" >{projectInfo}</div> : null}
     </div>  

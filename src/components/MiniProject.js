@@ -19,7 +19,7 @@ function MiniProject( { match } ) {
       <div className="Window ProjectDetails">
         <div className="mini">
         <h1>{match.params.name}</h1>
-        <Info />
+        <Info description="Words and Words"/>
           {getProject()}
         </div>
       </div>
