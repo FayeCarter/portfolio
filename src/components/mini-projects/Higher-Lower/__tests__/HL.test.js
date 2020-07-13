@@ -121,5 +121,24 @@ describe('Higher-Lower testing', () => {
       expect(wrapper.find(".score").text()).toEqual("0");
       expect(wrapper.find(".game-status")).toEqual({});
     });
+
+    it("drawing an equal value card when selecting lower doesn't end game", async () => {
+      const firstCard = firstCardMock;
+      axios.get.mockResolvedValue(firstCard);
+  
+      wrapper.find(".start-game").simulate("click")
+      await waitUntil(() => wrapper.find("current-card"))
+  
+      const equalValue = equalValueMock;
+      axios.get.mockResolvedValue(equalValue);
+
+      wrapper.find(".lower").simulate("click")
+      await waitUntil(() => wrapper.find("previous-card"))
+      
+      expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
+      expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8H.png");
+      expect(wrapper.find(".score").text()).toEqual("0");
+      expect(wrapper.find(".game-status")).toEqual({});
+    });
   });
 });

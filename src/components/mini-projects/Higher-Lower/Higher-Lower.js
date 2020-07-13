@@ -35,7 +35,7 @@ function HigherLower() {
   const lower =  async () => {
     setPreviousCard(currentCard);
     let value = await getCard()
-    cardConverter(value) < currentCard.value ? setScore(score + 1) : setActive(false) ;
+    cardConverter(value) < currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
   }
 
   const checkDraw =  (current, previous) => {
