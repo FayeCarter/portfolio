@@ -36,4 +36,9 @@ describe("MiniProject page", () => {
     expect(wrapper.containsMatchingElement(<Info />)).toEqual(true);
   });
 
+  test("renders a link to github", () => {
+    let githubLink = "https://github.com/FayeCarter/portfolio/tree/master/src/components/mini-projects/Calculator";
+    expect(wrapper.find(".mini-git").prop("href")).toEqual(githubLink);
+  });
+
 })

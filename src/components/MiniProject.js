@@ -13,6 +13,14 @@ function MiniProject( { match } ) {
       <>
         <h1>{match.params.name}</h1>
         <Info  description={projectDescription[project]} />
+        <a 
+          href={`https://github.com/FayeCarter/portfolio/tree/master/src/components/mini-projects/${project}`} 
+          target="_blank" 
+          className="mini-git"
+          rel="noopener noreferrer" 
+          >
+            GITHUB
+          </a>
         <Item />
       </>
     )
