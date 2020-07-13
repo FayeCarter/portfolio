@@ -6,12 +6,16 @@ function HigherLower() {
     image: "",
     value: "",
   });
-  const [ previousCard, setPreviousCard ] = useState("");
+  const [ previousCard, setPreviousCard ] = useState({
+    image: "",
+    value: "",
+  });
   const [ deckID, setDeckId ] = useState("");
-  const [ test, setTest ] = useState("");
-  const [ score, setScore ] = useState("");
+  const [ active, setActive ] = useState(false);
+  const [ score, setScore ] = useState("0");
 
   const startGame =  () => {
+    setActive(true)
     axios.get("https://deckofcardsapi.com/api/deck/new/draw/?count=1")
     .then( response => {
       let cardImage = response.data.cards[0].image
@@ -29,12 +33,14 @@ function HigherLower() {
       let cardImage = response.data.cards[0].image
       let cardValue = response.data.cards[0].value
       setCurrentCard({image: cardImage, value: cardValue})
-      checkValue(cardValue)    
+      checkValue(cardValue, "higher")    
     })
   }
- 
-  const checkValue =  (value) => {
-    value > currentCard.value ? setScore("1") : console.log("lower")
+
+  const checkValue =  (value, call) => {
+    if (call === "higher"){
+      value > currentCard.value ? setScore("1") : setActive(false)
+    }
   }
     
   return (
@@ -51,6 +57,7 @@ function HigherLower() {
       <button className="start-game" onClick={startGame}>Start</button>
       <button className="higher" onClick={higher}>Higher</button>
       <div className="score" >{score}</div>
+      { !active ? <div className="game-status" >Game Over</div> : null}
     </div>
   );
 }
