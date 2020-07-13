@@ -63,6 +63,10 @@
   background-color: rgb(246, 210, 53);
 }
 
+.controls button:hover {
+  -webkit-filter: brightness(80%); 
+}
+
 .game {
   display: flex;
   margin: auto;
