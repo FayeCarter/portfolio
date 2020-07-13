@@ -15,7 +15,7 @@ function HigherLower() {
   return (
     <div className="high-low">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Card_back_05a.svg" alt="deck"/>
-      { card? <img src={card} alt="card"/> : null}
+      { card? <img src={card} className="current-card" alt="card"/> : null}
       <button onClick={getCard}>Start</button>
     </div>
   );
