@@ -18,7 +18,7 @@ function MiniProject( { match } ) {
       <div className="Window ProjectDetails">
         <div className="mini">
         <h1>{match.params.name}</h1>
-            {getProject()}
+          {getProject()}
         </div>
       </div>
     </div>
