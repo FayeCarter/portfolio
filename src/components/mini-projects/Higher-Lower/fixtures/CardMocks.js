@@ -36,7 +36,7 @@ export const higherCardMock = {
       "suit": "SPADES"
       }
       ],
-      "remaining": 51
+      "remaining": 50
     }
 }
 
@@ -58,6 +58,6 @@ export const lowerCardMock = {
       "suit": "SPADES"
       }
       ],
-      "remaining": 51
+      "remaining": 49
     }
 }

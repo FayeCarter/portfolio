@@ -16,12 +16,31 @@ describe('Higher-Lower testing', () => {
 
   it('successfully fetches deck from an deck of cards API', async () => {
     const response = firstCardMock;
-
     axios.get.mockResolvedValue(response);
 
-    wrapper.find("button").simulate("click")
+    wrapper.find(".start-game").simulate("click")
     await waitUntil(() => wrapper.find("current-card"))
 
     expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
   });
+
+  describe("Higher button", () => {
+    it('drawing a higher card adds to the score', async () => {
+      const firstCard = firstCardMock;
+      axios.get.mockResolvedValue(firstCard);
+  
+      wrapper.find(".start-game").simulate("click")
+      await waitUntil(() => wrapper.find("current-card"))
+  
+      const higherCard = higherCardMock;
+      axios.get.mockResolvedValue(higherCard);
+
+      wrapper.find(".higher").simulate("click")
+      await waitUntil(() => wrapper.find("previous-card"))
+      
+      expect(wrapper.find(".previous-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/8S.png");
+      expect(wrapper.find(".current-card").prop("src")).toEqual("https://deckofcardsapi.com/static/img/9S.png");
+      expect(wrapper.find(".score").text()).toEqual("1");
+    });
+  })
 });
