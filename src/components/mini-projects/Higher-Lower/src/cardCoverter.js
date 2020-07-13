@@ -1,5 +1,7 @@
 export const cardConverter = (card) => {
   if (card === "JACK") {
     return "11";
+  } else if (card === "QUEEN") {
+    return "12";
   }
 }
