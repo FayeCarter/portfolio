@@ -8,3 +8,6 @@ test("it converts Queen to value 12", () => {
   expect(cardConverter("QUEEN")).toEqual("12");
 });
 
+test("it converts King to value 13", () => {
+  expect(cardConverter("KING")).toEqual("13");
+});
