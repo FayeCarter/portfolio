@@ -1,4 +1,6 @@
-.info {
+.info, .mini-git {
+  display: inline;
+  padding-right: 20px;
   font-size: 0.75em;
   font-weight: bold;
 }
