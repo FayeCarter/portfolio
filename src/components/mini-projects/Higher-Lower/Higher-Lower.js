@@ -28,15 +28,21 @@ function HigherLower() {
   }
 
   const higher =  async () => {
-    setPreviousCard(currentCard);
-    let value = await getCard()
-    cardConverter(value) > currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
+    if (active) {
+      setPreviousCard(currentCard);
+      setCurrentCard({})
+      let value = await getCard()
+      cardConverter(value) > currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
+    } 
   }
 
   const lower =  async () => {
-    setPreviousCard(currentCard);
-    let value = await getCard()
-    cardConverter(value) < currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
+    if (active) {
+      setPreviousCard(currentCard);
+      setCurrentCard({})
+      let value = await getCard()
+      cardConverter(value) < currentCard.value ? setScore(score + 1) : checkDraw(cardConverter(value), currentCard.value);
+    }
   }
 
   const checkDraw =  (current, previous) => {
