@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Block from './src/components/Block';
+import "./Memory.css"
 
 const COLOURS = ["red", "green", "blue", "yellow"]
 
@@ -12,17 +13,19 @@ function Memory() {
   }
 
   return (
-    <div className="memory">
-      {COLOURS.map((colour, index) => {
-        return (
-          <Block 
-            key={ index  }
-            value={ colour }
-            activeBlock={ activeBlock }
-          />
-        )
-      })}
-      <button onClick={startGame} >Start Game</button>
+    <div className="memory mini-project">
+      <div className="blocks">
+        {COLOURS.map((colour, index) => {
+          return (
+            <Block 
+              key={ index  }
+              value={ colour }
+              activeBlock={ activeBlock }
+            />
+          )
+        })}
+        <button className="start" onClick={startGame} >Start</button>
+      </div>
     </div>
   );
 }
