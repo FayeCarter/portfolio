@@ -1,21 +1,27 @@
 import React, {useState} from 'react';
 import Block from './src/components/Block';
 
-function Memory() {
+const COLOURS = ["red", "green", "blue", "yellow"]
 
+function Memory() {
   const [activeBlock, setActiveBlock] = useState("0")
   
   const startGame = () => {
-    let randomNumber = (Math.floor(Math.random() * 4) + 1)
-    setActiveBlock(String(randomNumber))
+    let randomNumber = (Math.floor(Math.random() * COLOURS.length))
+    setActiveBlock(COLOURS[randomNumber])
   }
 
   return (
     <div className="memory">
-      <Block value="1" activeNumber={ activeBlock } />
-      <Block value="2" activeNumber={ activeBlock } />
-      <Block value="3" activeNumber={ activeBlock } />
-      <Block value="4" activeNumber={ activeBlock } />
+      {COLOURS.map((colour, index) => {
+        return (
+          <Block 
+            key={ index  }
+            value={ colour }
+            activeBlock={ activeBlock }
+          />
+        )
+      })}
       <button onClick={startGame} >Start Game</button>
     </div>
   );

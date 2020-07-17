@@ -12,10 +12,10 @@ describe("Memory component testing", () => {
 
   test("renders with 4 Blocks", () => {
     expect(wrapper.containsAllMatchingElements([
-      <Block value="1" />,
-      <Block value="2" />,
-      <Block value="3" />,
-      <Block value="4" />,
+      <Block value="red" />,
+      <Block value="blue" />,
+      <Block value="green" />,
+      <Block value="yellow" />,
     ])).toEqual(true);
   });
 
@@ -29,7 +29,7 @@ describe("Memory component testing", () => {
       wrapper.find("button").simulate("click");
 
       expect(wrapper.containsAllMatchingElements([
-        <Block value="1" activeNumber="2" />,
+        <Block value="green" activeBlock="green" />,
       ])).toEqual(true);
     });
   })

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import "./Block.css"
 
-function Block ({value, activeNumber}) {
+function Block ({value, activeBlock}) {
 
   const [ status, setStatus] = useState("inactive");
 
   useEffect(() => {
-    if( value === activeNumber ) {
+    if( value === activeBlock ) {
       setStatus("active")
       setTimeout(() => {
         setStatus("inactive")
       }, 1000)
     }
-  }, [activeNumber]);
+  }, [activeBlock]);
 
   return (
     <div className={`block ${status}`} value={value} >
