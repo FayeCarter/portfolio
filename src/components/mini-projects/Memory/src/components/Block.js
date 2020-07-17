@@ -8,6 +8,9 @@ function Block ({value, activeNumber}) {
   useEffect(() => {
     if( value === activeNumber ) {
       setStatus("active")
+      setTimeout(() => {
+        setStatus("inactive")
+      }, 1000)
     }
   }, [activeNumber]);
 
