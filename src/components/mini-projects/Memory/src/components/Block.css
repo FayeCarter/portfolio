@@ -1,15 +1,25 @@
 .block {
-  height: 30px;
-  width: 30px;
-  border: 1px solid black;
+  height: 80px;
+  width: 80px;
+  margin: 20px;
 }
 
 .active {
-  color: green;
-
+  filter: saturate(30%);
 }
 
-.inactive {
-  color: red;
+.red {
+  background-color: rgb(197, 7, 7);
+}
 
+.blue {
+  background-color: rgb(60, 78, 237);
+}
+
+.green {
+  background-color: rgb(7, 197, 39);
+}
+
+.yellow {
+  background-color: rgb(243, 211, 30);
 }

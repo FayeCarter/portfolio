@@ -15,8 +15,7 @@ function Block ({value, activeBlock}) {
   }, [activeBlock]);
 
   return (
-    <div className={`block ${status}`} value={value} >
-      <div>{value}</div>
+    <div className={`block ${value} ${status}`} value={value} >
     </div>
   );
 }
