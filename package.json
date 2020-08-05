@@ -9,8 +9,7 @@
     "start-server": "nodemon index.js",
     "start-client": "cd client && npm run start",
     "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
-    "build": "cd client && npm run build",
-    "deploy": "npm run build && npm run start-server"
+    "build": "cd client && npm run build"
   },
   "jest": {
     "testPathIgnorePatterns": [
