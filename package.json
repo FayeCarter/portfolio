@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-client": "cd client && npm run test",
     "start-server": "nodemon index.js",
     "start-client": "cd client && npm run start",
     "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
     "build": "cd client && npm run build"
   },
   "jest": {
-    "testPathIgnorePatterns": ["client"]
+    "testPathIgnorePatterns": [
+      "client"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jest": "^26.2.2",
