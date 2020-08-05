@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
-import Info from "./mini-projects/Info"
+import Info from "../components/mini-projects/Info"
 import { projectDescription } from "./mini-projects/projectDescription";
 
 function MiniProject( { match } ) {
