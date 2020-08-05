@@ -2,8 +2,6 @@ const request = require("supertest");
 const app = require("../../index");
 
 describe("Test the api path", () => {
-
-  afterEach(() => app.close());
   
   test("It should response the GET method", done => {
     request(app)
