@@ -1,0 +1,43 @@
+.Contact {
+  width: 500px;
+}
+
+input, textarea {
+  background-image: linear-gradient(to bottom right, rgb(248, 248, 248), rgb(237, 237, 237));
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px;
+  width: 500px;
+  line-height: 20px;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+input::placeholder, textarea::placeholder  { 
+  color: rgb(121, 121, 121);
+}
+
+input:focus, textarea:focus {
+  background-image: linear-gradient(to bottom right, rgb(35, 79, 88),rgb(29, 59, 65));
+  color: white;
+}
+
+button {
+  margin: auto;
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(245, 109, 109);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
